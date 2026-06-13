@@ -1306,6 +1306,10 @@ html{ scroll-behavior:smooth; }
 .sc-underline{width:120px;height:5px;border-radius:5px;margin-bottom:20px;
   background:linear-gradient(90deg,var(--sc-teal),var(--sc-yellow),var(--sc-red))}
 .sc-section-head p{color:var(--sc-ink);font-size:1.02rem;line-height:1.7;margin:0}
+.sc-quote{margin:24px 0 0;padding:6px 0 6px 22px;border-left:4px solid var(--sc-teal);
+  font-family:'Fraunces',serif;font-style:italic;font-size:1.18rem;line-height:1.45;color:var(--sc-navy)}
+.sc-quote cite{display:block;margin-top:10px;font-family:'Archivo',system-ui,sans-serif;font-style:normal;
+  font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sc-teal)}
 
 /* cifras  */
 .sc-stats{list-style:none;margin:28px 0 0;padding:24px 0 0;border-top:1px dashed rgba(20,48,73,.22);
@@ -1333,7 +1337,7 @@ html{ scroll-behavior:smooth; }
 .sc-card h3{font-family:'Fraunces',serif;font-size:1.28rem;font-weight:600;margin:0 0 10px;color:var(--sc-navy)}
 .sc-card h3::after{content:"";display:block;width:28px;height:3px;border-radius:3px;margin-top:8px;background:var(--card-accent)}
 .sc-card p{font-size:.9rem;color:var(--sc-ink);margin:0;line-height:1.6}
-.sc-card .sc-illus{height:128px;width:100%;margin-top:18px;transition:transform .35s ease}
+.sc-card .sc-illus{height:128px;width:100%;margin-top:18px;display:block;object-fit:cover;object-position:center;transition:transform .35s ease}
 .sc-card:hover .sc-illus{transform:scale(1.05)}
 .sc-card--purple{--card-accent:var(--sc-purple)}
 .sc-card--orange{--card-accent:var(--sc-orange)}
@@ -1341,6 +1345,8 @@ html{ scroll-behavior:smooth; }
 
 /* ==INTRO DE LOS MAPAS ================= */
 .sc-mapas-intro{max-width:1280px;margin:0 auto;padding:54px 28px 0}
+.sc-mapas-grid{display:grid;grid-template-columns:1.55fr .95fr;gap:48px;align-items:center}
+.sc-mapas-grid .sc-stats{margin:0;padding:0;border-top:0}
 .sc-mapas-intro h2{font-family:'Fraunces',serif;font-weight:600;color:var(--sc-navy);
   font-size:clamp(1.9rem,3.4vw,2.5rem);margin:0 0 14px}
 .sc-mapas-intro p{max-width:75ch;color:var(--sc-ink);font-size:1.04rem;line-height:1.75;margin:0}
@@ -1430,6 +1436,8 @@ html{ scroll-behavior:smooth; }
   .sc-hero-art{order:-1}
   .sc-band{grid-template-columns:repeat(2,1fr)}
   .sc-purpose-grid{grid-template-columns:1fr}
+  .sc-mapas-grid{grid-template-columns:1fr;gap:26px}
+  .sc-mapas-grid .sc-stats{margin-top:6px;padding-top:24px;border-top:1px dashed rgba(20,48,73,.22)}
   .sc-cards{grid-template-columns:1fr}
   .sc-card:nth-child(2){margin-top:0}
   .sc-titulo{align-items:center}
