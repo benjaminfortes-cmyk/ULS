@@ -1,0 +1,26 @@
+{
+  "name": "Serena Conecta",
+  "short_name": "Serena Conecta",
+  "description": "Redes de apoyo, atractivos y transporte de La Serena para la comunidad migrante.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#081f5c",
+  "theme_color": "#081f5c",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

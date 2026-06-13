@@ -9,7 +9,8 @@
   <meta name="author" content="Universidad de La Serena · Ilustre Municipalidad de La Serena" />
   <meta name="theme-color" content="#081f5c" />
   <link rel="icon" type="image/png" href="assets/favicon-uls.png" />
-  <link rel="apple-touch-icon" href="assets/favicon-uls.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
 
   <!-- vista previa al compartir para el wsp o y demasss -->
   <meta property="og:type" content="website" />
@@ -108,7 +109,7 @@
           <span class="sc-divisor__gema"></span>
           <span class="sc-divisor__linea sc-divisor__linea--corta"></span>
         </div>
-        <p class="sc-lead" data-i18n="quienesTexto">Somos estudiantes de Ingeniería Civil Industrial de la Universidad de La Serena, quienes actualmente se encuentran buscando crear este proyecto de apoyo y ayuda a la comunidad migrante de la ciudad de La Serena, con el propósito de conseguir una ciudad multicultural.</p>
+        <p class="sc-lead" data-i18n="quienesTexto">Somos estudiantes de Ingeniería Civil Industrial de la Universidad de La Serena, quienes actualmente se encuentran buscando crear este proyecto de creación de valor compartido mediante apoyo y ayuda a la comunidad migrante de la ciudad de La Serena, con el propósito de conseguir una ciudad multicultural.</p>
         <div class="sc-btns">
           <a href="#apoyo" class="sc-btn sc-btn--primary" data-filtro="inmigrantes">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -536,6 +537,17 @@
   <script src="js/script.js"></script>
   <!-- PLANIFICADO modo) -->
   <script src="js/planificador.js"></script>
+
+  <!-- activa la PWA offline -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function (err) {
+          console.warn('No se pudo registrar el Service Worker:', err);
+        });
+      });
+    }
+  </script>
  <!-- Hecho por Benjamín Fortes Carrasco -->
 <!-- Recaudación de información por ingenieros civiles industriales junto a Profesor Cabana -->
 </body>
