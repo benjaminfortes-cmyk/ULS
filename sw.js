@@ -1,5 +1,5 @@
 // PARA MI PAW HECHO POR BENJAMIN FORTES EJEJEJE
-const CACHE = 'serena-conecta-v1';
+const CACHE = 'serena-conecta-v2';
 
 
 const ASSETS = [
