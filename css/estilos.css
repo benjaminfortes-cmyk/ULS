@@ -657,6 +657,33 @@ html, body {
   background: #fff;
 }
 
+.sentido-toggle {
+  display: inline-flex;
+  gap: 6px;
+  margin: -10px 0 22px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--crema);
+  border: 1px solid var(--linea);
+}
+.sentido-btn {
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--texto);
+  padding: 8px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+.sentido-btn.activo {
+  background: #fff;
+  color: var(--planetary, #0f2a4a);
+  box-shadow: 0 4px 12px -4px rgba(20, 48, 73, 0.3);
+}
+
 #map3 {
   flex: 1 1 60%;
   border-radius: 16px;

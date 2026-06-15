@@ -24,7 +24,9 @@
     planSubeAqui: 'Sube aquí',
     planBajaAqui: 'Bájate aquí',
     planResumen: 'Camina {dO} m hasta «{sube}», viaja {n} paradas y bájate en «{baja}», a {dD} m de tu destino.',
-    planCaminando: 'min caminando en total'
+    planCaminando: 'min caminando en total',
+    sentidoIda: 'Ida',
+    sentidoVuelta: 'Vuelta'
   });
   Object.assign(traducciones.en, {
     planTabExplorarT: 'Explore routes',
@@ -46,7 +48,9 @@
     planSubeAqui: 'Get on here',
     planBajaAqui: 'Get off here',
     planResumen: 'Walk {dO} m to “{sube}”, ride {n} stops and get off at “{baja}”, {dD} m from your destination.',
-    planCaminando: 'min walking in total'
+    planCaminando: 'min walking in total',
+    sentidoIda: 'Outbound',
+    sentidoVuelta: 'Return'
   });
   Object.assign(traducciones.de, {
     planTabExplorarT: 'Strecken erkunden',
@@ -68,7 +72,9 @@
     planSubeAqui: 'Hier einsteigen',
     planBajaAqui: 'Hier aussteigen',
     planResumen: 'Gehe {dO} m bis „{sube}“, fahre {n} Haltestellen und steige bei „{baja}“ aus, {dD} m von deinem Ziel.',
-    planCaminando: 'Min. Fußweg insgesamt'
+    planCaminando: 'Min. Fußweg insgesamt',
+    sentidoIda: 'Hinfahrt',
+    sentidoVuelta: 'Rückfahrt'
   });
   Object.assign(traducciones.pt, {
     planTabExplorarT: 'Explorar percursos',
@@ -90,7 +96,9 @@
     planSubeAqui: 'Suba aqui',
     planBajaAqui: 'Desça aqui',
     planResumen: 'Caminhe {dO} m até «{sube}», viaje {n} paradas e desça em «{baja}», a {dD} m do seu destino.',
-    planCaminando: 'min caminhando no total'
+    planCaminando: 'min caminhando no total',
+    sentidoIda: 'Ida',
+    sentidoVuelta: 'Volta'
   });
 
 
@@ -154,8 +162,7 @@
   });
 
   // Mejor tramo de una línea
-  function mejorTramo(linea) {
-    const paradas = linea.paradas;
+  function mejorTramo(paradas) {
     let mejor = null;
     let minO = Infinity;
     let idxO = -1;
@@ -180,8 +187,13 @@
   function calcular() {
     opciones = [];
     Object.keys(lineasMicro).forEach((num) => {
-      const tramo = mejorTramo(lineasMicro[num]);
-      if (tramo) opciones.push({ num, ...tramo });
+      const linea = lineasMicro[num];
+      const sentidos = [{ sentido: 'ida', paradas: linea.paradas }];
+      if (linea.paradasVuelta) sentidos.push({ sentido: 'vuelta', paradas: linea.paradasVuelta });
+      sentidos.forEach((s) => {
+        const tramo = mejorTramo(s.paradas);
+        if (tramo) opciones.push({ num, paradas: s.paradas, sentido: s.sentido, ...tramo });
+      });
     });
     opciones.sort((a, b) => a.score - b.score);
     opciones = opciones.slice(0, 3);
@@ -220,8 +232,9 @@
     capaPlan.clearLayers();
     const t = tPlan();
     const linea = lineasMicro[op.num];
-    const sube = linea.paradas[op.i];
-    const baja = linea.paradas[op.j];
+    const paradas = op.paradas;
+    const sube = paradas[op.i];
+    const baja = paradas[op.j];
 
     L.marker(origen, { icon: crearIconoUsuario(), zIndexOffset: 1000 })
       .bindPopup(`<div class="popup-content"><h3>${t.tuUbicacion}</h3></div>`)
@@ -231,7 +244,7 @@
       .addTo(capaPlan);
 
     // tramo del recorrido en micro
-    const tramo = linea.paradas.slice(op.i, op.j + 1);
+    const tramo = paradas.slice(op.i, op.j + 1);
     const coordsTramo = tramo.map((p) => p.c);
     L.polyline(coordsTramo, { color: linea.color, weight: 5, opacity: 0.85 }).addTo(capaPlan);
     tramo.forEach((p) => {
@@ -260,8 +273,9 @@
     panel.innerHTML = `<p class="micro-panel__titulo">${t.planTitOpciones}</p>`;
     opciones.forEach((op, idx) => {
       const linea = lineasMicro[op.num];
-      const sube = linea.paradas[op.i];
-      const baja = linea.paradas[op.j];
+      const paradas = op.paradas;
+      const sube = paradas[op.i];
+      const baja = paradas[op.j];
       const minCaminata = Math.max(1, Math.round((op.dO + op.dD) / 75));
       const resumen = t.planResumen
         .replace('{dO}', Math.round(op.dO))

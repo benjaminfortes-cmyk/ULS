@@ -1018,6 +1018,35 @@
           { n: 'Ernesto Sábato, 3566-3594', c: [-29.864201161362143, -71.23603973556845] },
           { n: 'Jorge Inostroza, 2775-2795', c: [-29.86461876218473, -71.23720230674579] },
           { n: 'Monjitas Poniente', c: [-29.86568766433904, -71.23965920673646] }
+        ],
+        paradasVuelta: [
+          { n: 'Monjitas Poniente', c: [-29.86568876433904, -71.23965920673646] },
+          { n: 'Nicolás Munizaga, 2644', c: [-29.86873569729674, -71.24212150492589] },
+          { n: 'Viña Del Mar, 2564-2592', c: [-29.87168960991441, -71.24269010492571] },
+          { n: 'Monjitas, 2607-2633', c: [-29.873680580353774, -71.24565657790959] },
+          { n: 'Pedro De Valdivia, 218-296', c: [-29.876834310218655, -71.25073673376151] },
+          { n: 'El Brillador', c: [-29.880653020633353, -71.25020023376124] },
+          { n: 'Alejandro Flores, 1946-1950', c: [-29.882755427135542, -71.24770043376127] },
+          { n: 'Nicaragua, 1510-1580', c: [-29.886555408205965, -71.24263646441806] },
+          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
+          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
+          { n: 'Liber Bernardo O\'Higgins, 101-199', c: [-29.899131030562174, -71.2482637355721] },
+          { n: 'Los Carrera, 216-260', c: [-29.89936122192691, -71.25076354907347] },
+          { n: 'Colón, 335-399', c: [-29.899503032988246, -71.25217975091144] },
+          { n: 'Colón, 205-299', c: [-29.899414717642706, -71.25361209325423] },
+          { n: 'Pasarela Lider', c: [-29.902381630830945, -71.25631570674578] },
+          { n: 'Liceo Técnico', c: [-29.905622789277697, -71.25366028650846] },
+          { n: 'Bomberos', c: [-29.905398380101314, -71.24991022691012] },
+          { n: 'Juan De Dios Peni, 761-799', c: [-29.907645548559397, -71.2468582355819] },
+          { n: 'Juan De Dios Peni, 967-997', c: [-29.907845548899896, -71.24424043558189] },
+          { n: 'Rodolfo Wagenknecht', c: [-29.913595085679614, -71.23617767608765] },
+          { n: 'Juan Georgini Runi, 1543-1547', c: [-29.9195628937338, -71.23677850492342] },
+          { n: 'San Joaquín, 1516-1532', c: [-29.923050200986636, -71.23762613375926] },
+          { n: 'Alberto Aguirre Luco, 1277-1285', c: [-29.930655950061965, -71.24364494725079] },
+          { n: 'Alberto Arenas Carvajal, 3211-3291', c: [-29.937867058530564, -71.24720791470989] },
+          { n: 'Avenida Rodolfo Wagenknecht, 1485-1489', c: [-29.943402640370486, -71.24527577608617] },
+          { n: 'Avenida Rodolfo Wagenknecht', c: [-29.945973138138616, -71.24628423375808] },
+          { n: 'Los Plátanos, 1557-1561', c: [-29.949742737595216, -71.2439561049218] }
         ]
       },
       '2': {
@@ -1327,6 +1356,114 @@
           { n: 'Luis Enrique Cerda, 1690', c: [-29.97761147613813, -71.24586999325422] },
           { n: 'Camino A Huachalalume, 37', c: [-29.97590488566115, -71.24141503558192] }
         ]
+      },
+      '20': {
+        color: '#0EA5E9',
+        paradas: [
+          { n: 'Calle Montepatria', c: [-29.883583, -71.212333] },
+          { n: 'Montepatria / Pedro Mendez', c: [-29.88256963198198, -71.21682510051308] },
+          { n: 'Montepatria / Rafael Otarola', c: [-29.882781722421562, -71.21513437608917] },
+          { n: 'Area Verde Villa Bicentenario', c: [-29.87956208946797, -71.2182122932542] },
+          { n: 'Garita Lincosur', c: [-29.87887, -71.21693] },
+          { n: 'Cementerio Las Compañias', c: [-29.87529498665709, -71.21829946441807] },
+          { n: 'Parque Los Llanos', c: [-29.876417996318146, -71.2209963797785] },
+          { n: 'Calle Pintor Mario Carreño, 3838', c: [-29.877286584703917, -71.22466930673093] },
+          { n: 'Pasaje Tocopilla', c: [-29.878383962653643, -71.22620808161571] },
+          { n: 'Circunvalación Álvarez Zorrilla, 3173', c: [-29.87358308015827, -71.22686633558192] },
+          { n: 'Actor Pedro Sienna, 3147', c: [-29.871697883209663, -71.22778620674578] },
+          { n: 'Janequeo, 3301', c: [-29.87216378405696, -71.23156557790962] },
+          { n: 'Avenida Viña Del Mar, 3786', c: [-29.87255327475851, -71.23459139325422] },
+          { n: 'Avenida Viña Del Mar, 3008', c: [-29.872058383865287, -71.23689106441809] },
+          { n: 'Aurora, 2771-2799', c: [-29.871857083499194, -71.24085013558192] },
+          { n: 'Viña Del Mar, 2564-2592', c: [-29.871675679750965, -71.24266327790963] },
+          { n: 'Monjitas, 2607-2633', c: [-29.873680580353774, -71.24565657790959] },
+          { n: 'Monjitas, 2301-2399', c: [-29.878192492211678, -71.24618235092647] },
+          { n: 'Gaspar Marín, 2741-2799', c: [-29.88199729704393, -71.24159043557316] },
+          { n: 'Nicaragua, 1510-1580', c: [-29.886555408205965, -71.24263646441806] },
+          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
+          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
+          { n: 'Almagro, 506', c: [-29.898161627573607, -71.24924550674578] },
+          { n: 'Pedro Pablo Muñoz, 104', c: [-29.898454928216974, -71.25342803558193] },
+          { n: 'Pedro Pablo Muñoz, 340-390', c: [-29.901809634972654, -71.25411096441809] },
+          { n: 'Pedro Pablo Muñoz, 831', c: [-29.906220945062195, -71.25442970674578] },
+          { n: 'El Sto, 1060', c: [-29.909473052167, -71.25521603558192] },
+          { n: 'Mall Plaza La Serena', c: [-29.91268174404274, -71.25671960830657] }
+        ]
+      },
+      'E01': {
+        color: '#65A30D',
+        paradas: [
+          { n: 'Alberto Hurtado Cruchaga con Av. El Sauce', c: [-30.00540808359883, -71.32989157608313] },
+          { n: 'Ramón Rodríguez', c: [-29.996197896655236, -71.33562369142766] },
+          { n: 'Pasaje Enrique Fernández', c: [-29.99564745441705, -71.33374103375563] },
+          { n: 'Av. Portugal Sur', c: [-29.996654848014018, -71.33379004724748] },
+          { n: 'Carlos Muñoz Pizarro', c: [-29.995098875153566, -71.33178752449375] },
+          { n: 'Glorias Navales', c: [-29.995377328254218, -71.331031141552] },
+          { n: 'Las Vertientes', c: [-29.992561849497775, -71.33295696761822] },
+          { n: 'Francisco Cabello Cárdenas', c: [-29.994795582174422, -71.32923964724755] },
+          { n: 'Los Clarines', c: [-29.987905174952072, -71.33229132582102] },
+          { n: 'Av. Presidente Arturo Alessandri', c: [-29.974386785887663, -71.3358714765664] },
+          { n: 'Los Copihues', c: [-29.981127008386608, -71.33864004586601] },
+          { n: 'Los Alelíes', c: [-29.97760265464216, -71.34145409434466] },
+          { n: 'Diagonal Las Torres', c: [-29.977460094810898, -71.33915149830055] },
+          { n: 'Los Tulipanes', c: [-29.977949103511037, -71.34226106108153] },
+          { n: 'Luis Balanda', c: [-29.972741159152264, -71.33706292871318] },
+          { n: 'Alessandri', c: [-29.97447480270236, -71.33573864592245] },
+          { n: 'Manuel Jesús Rivera', c: [-29.96990431668145, -71.33686863349276] },
+          { n: 'Av. Suecia', c: [-29.96881086435138, -71.31883394503546] },
+          { n: 'Panamericana Norte', c: [-29.96572537099748, -71.3210163432037] },
+          { n: 'La Cantera', c: [-29.975612569936782, -71.29562439457075] },
+          { n: 'Av. José Joaquín Pérez', c: [-29.96099058792892, -71.30120790329677] },
+          { n: 'Los Jardines', c: [-29.953815859898114, -71.2902188326153] },
+          { n: 'Las Parcelas', c: [-29.956543016373306, -71.3033170583387] },
+          { n: 'Regimiento Arica', c: [-29.95231311781832, -71.26401899814681] },
+          { n: 'Los Lagos', c: [-29.95485352792116, -71.27489389140122] },
+          { n: 'Av. Balmaceda', c: [-29.955070958137764, -71.26782740276592] },
+          { n: 'Amunátegui', c: [-29.91007289944444, -71.24999645077202] },
+          { n: 'Benavente', c: [-29.90908710375803, -71.24690648650848] },
+          { n: 'Colo Colo', c: [-29.906508600968877, -71.2464370901918] },
+          { n: 'Cienfuegos', c: [-29.905627444427758, -71.24853189321821] },
+          { n: 'Puente Libertador', c: [-29.897983130068326, -71.24624656441809] },
+          { n: 'Av. Islón', c: [-29.891484617635108, -71.24909756441807] },
+          { n: 'Bandera', c: [-29.88648250399499, -71.2436492932542] },
+          { n: 'La Conquista', c: [-29.885322912061813, -71.24573711349154] },
+          { n: 'Gaspar Marín', c: [-29.88198799457962, -71.24160116440602] },
+          { n: 'Los Morros', c: [-29.887942810859798, -71.21713200674579] }
+        ]
+      },
+      'E02': {
+        color: '#F59E0B',
+        paradas: [
+          { n: 'La Pampilla', c: [-29.96027587771848, -71.35025332366156] },
+          { n: 'Guacolda', c: [-29.96357785570416, -71.34602365092653] },
+          { n: 'Gabriela Mistral', c: [-29.960086553850005, -71.34365296441807] },
+          { n: 'Buen Pastor', c: [-29.961824737145687, -71.34510135729818] },
+          { n: 'Luis Cruz Martínez', c: [-29.948983093555555, -71.34863276441456] },
+          { n: 'Manuel Rodríguez', c: [-29.958746751156305, -71.34547166441807] },
+          { n: 'Camilo Henríquez', c: [-29.957259491326763, -71.34480647657682] },
+          { n: 'Av. Pedro Nolasco Videla', c: [-29.958435357964525, -71.33821897122404] },
+          { n: 'Domeyko', c: [-29.966764961814885, -71.33297283558191] },
+          { n: 'Miraflores', c: [-29.966968487215595, -71.32823493002283] },
+          { n: 'Panamericana Norte', c: [-29.96572537099748, -71.3210163432037] },
+          { n: 'Av. La Cantera', c: [-29.975612569936782, -71.29562439457075] },
+          { n: 'Av. José Joaquín Pérez', c: [-29.96099058792892, -71.30120790329677] },
+          { n: 'Los Jardines', c: [-29.953815859898114, -71.2902188326153] },
+          { n: 'Las Parcelas', c: [-29.956543016373306, -71.3033170583387] },
+          { n: 'Regimiento Arica', c: [-29.95231311781832, -71.26401899814681] },
+          { n: 'Av. Los Lagos', c: [-29.95485352792116, -71.27489389140122] },
+          { n: 'Av. Balmaceda', c: [-29.955070958137764, -71.26782740276592] },
+          { n: 'Av. Amunátegui', c: [-29.91007289944444, -71.24999645077202] },
+          { n: 'Benavente', c: [-29.90908710375803, -71.24690648650848] },
+          { n: 'Av. Colo Colo', c: [-29.906508600968877, -71.2464370901918] },
+          { n: 'Cienfuegos', c: [-29.905627444427758, -71.24853189321821] },
+          { n: 'Puente El Libertador', c: [-29.897983130068326, -71.24624656441809] },
+          { n: 'Av. Islón', c: [-29.891484617635108, -71.24909756441807] },
+          { n: 'Bandera', c: [-29.88648250399499, -71.2436492932542] },
+          { n: 'La Conquista', c: [-29.885322912061813, -71.24573711349154] },
+          { n: 'Gaspar Marín', c: [-29.88198799457962, -71.24160116440602] },
+          { n: 'Monjitas', c: [-29.87369451023574, -71.24571559143375] },
+          { n: 'Av. Viña del Mar', c: [-29.872402854978194, -71.23691359808748] }
+        ]
       }
     };
 
@@ -1334,6 +1471,11 @@
     const capaViaje = L.layerGroup().addTo(map3); 
     let lineaActiva = '1';
     let animToken = 0;
+    let sentidoActivo = 'ida';
+
+    function paradasDe(linea) {
+      return (sentidoActivo === 'vuelta' && linea.paradasVuelta) ? linea.paradasVuelta : linea.paradas;
+    }
 
     // Distancia aproximada en metros 
     function distancia(a, b) {
@@ -1347,20 +1489,24 @@
       const linea = lineasMicro[num];
       if (!linea) return;
       lineaActiva = num;
+      if (!linea.paradasVuelta) sentidoActivo = 'ida';
+      actualizarToggleSentido(linea);
       capaLinea.clearLayers();
       if (limpiarViaje) capaViaje.clearLayers();
 
-      const puntos = linea.paradas.map((p) => p.c);
+      const paradas = paradasDe(linea);
+      const sufijo = (sentidoActivo === 'vuelta' && linea.paradasVuelta) ? ' (vuelta)' : '';
+      const puntos = paradas.map((p) => p.c);
       if (puntos.length) {
         map3.fitBounds(L.latLngBounds(puntos), { padding: [40, 40] });
       }
 
       const token = ++animToken;
-      const paso = animar ? Math.min(75, Math.round(1500 / linea.paradas.length)) : 0;
+      const paso = animar ? Math.min(75, Math.round(1500 / paradas.length)) : 0;
 
-      linea.paradas.forEach((p, i) => {
+      paradas.forEach((p, i) => {
         const poner = () => {
-          if (token !== animToken) return; 
+          if (token !== animToken) return;
           L.circleMarker(p.c, {
             radius: 8,
             color: '#ffffff',
@@ -1369,7 +1515,7 @@
             fillOpacity: 1
           })
             .bindPopup(
-              `<div class="popup-content"><h3>Línea ${num}</h3><p><strong>Parada ${i + 1}:</strong> ${p.n}</p></div>`
+              `<div class="popup-content"><h3>Línea ${num}${sufijo}</h3><p><strong>Parada ${i + 1}:</strong> ${p.n}</p></div>`
             )
             .addTo(capaLinea);
         };
@@ -1383,6 +1529,7 @@
       btn.addEventListener('click', () => {
         lineaBtns.forEach((b) => b.classList.remove('activo'));
         btn.classList.add('activo');
+        sentidoActivo = 'ida';
         mostrarLinea(btn.getAttribute('data-linea'));
       });
     });
@@ -1390,6 +1537,21 @@
     function sincronizarBotonesLinea(num) {
       lineaBtns.forEach((b) => b.classList.toggle('activo', b.getAttribute('data-linea') === num));
     }
+
+    // --- Interruptor  ---
+    const sentidoToggle = document.getElementById('sentidoToggle');
+    const sentidoBtns = sentidoToggle ? Array.from(sentidoToggle.querySelectorAll('[data-sentido]')) : [];
+    function actualizarToggleSentido(linea) {
+      if (!sentidoToggle) return;
+      sentidoToggle.classList.toggle('oculto', !linea.paradasVuelta);
+      sentidoBtns.forEach((b) => b.classList.toggle('activo', b.getAttribute('data-sentido') === sentidoActivo));
+    }
+    sentidoBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        sentidoActivo = btn.getAttribute('data-sentido');
+        mostrarLinea(lineaActiva, { animar: true });
+      });
+    });
 
     mostrarLinea(lineaActiva, { animar: false });
     
@@ -1401,6 +1563,7 @@
    
     function seleccionarLineaYCentrar(num, coords) {
       sincronizarBotonesLinea(num);
+      sentidoActivo = 'ida';
       mostrarLinea(num, { animar: false });
       if (coords) {
         map3.setView(coords, 16, { animate: true });
