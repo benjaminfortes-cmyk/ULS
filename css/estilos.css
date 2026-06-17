@@ -99,7 +99,7 @@ html, body {
 .topbar__logo-muni {
   height: 30px;
   width: auto;
-  display: block;
+  display: none;
 }
 
 
@@ -1244,6 +1244,8 @@ html{ scroll-behavior:smooth; }
 .sc-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--sc-teal);
   font-weight:800;letter-spacing:.26em;font-size:.76rem;text-transform:uppercase;margin-bottom:10px}
 .sc-eyebrow::before{content:"";width:22px;height:2px;background:var(--sc-teal)}
+.sc-eyebrow--sin-guion{gap:0}
+.sc-eyebrow--sin-guion::before{display:none}
 .sc-hero h1{font-family:'Fraunces',serif;font-weight:600;color:var(--sc-navy);
   font-size:clamp(3rem,7vw,5.2rem);line-height:.98;letter-spacing:-.01em;margin:0}
 .sc-hero .sc-lead{margin:16px 0 24px;font-size:1.04rem;max-width:34em;color:var(--sc-ink);line-height:1.65}
@@ -1653,6 +1655,111 @@ html{ scroll-behavior:smooth; }
 
 .plan-tip--baja::before {
   border-top-color: #D2492F;
+}
+
+/* ===== Paraderos favoritos ===== */
+.micro-accion--fav {
+  color: #B45309;
+  border-color: #F59E0B;
+}
+.micro-accion--fav svg {
+  color: #F59E0B;
+}
+.micro-accion--fav:hover {
+  background: #FEF3C7;
+  border-color: #F59E0B;
+}
+
+/* Estrella dentro de los popups del mapa */
+.popup-fav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #92400E;
+  background: #FEF3C7;
+  border: 1.5px solid #F59E0B;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.popup-fav.is-fav {
+  color: #fff;
+  background: #F59E0B;
+}
+.popup-fav:hover {
+  filter: brightness(0.97);
+}
+
+/* Panel lateral de favoritos */
+.fav-panel__tit {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #B45309;
+}
+.fav-vacio {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+}
+.fav-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.fav-item {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+}
+.fav-ir {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--planetary, #143049);
+  background: #fff;
+  border: 1.5px solid #F1D9A8;
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.fav-ir:hover {
+  background: #FFFBEB;
+  border-color: #F59E0B;
+}
+.fav-estrella {
+  color: #F59E0B;
+  font-size: 15px;
+  line-height: 1;
+}
+.fav-del {
+  flex: 0 0 auto;
+  width: 34px;
+  font-size: 18px;
+  line-height: 1;
+  color: #B91C1C;
+  background: #fff;
+  border: 1.5px solid #FCA5A5;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.fav-del:hover {
+  background: #FEE2E2;
 }
 
 

@@ -4,7 +4,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serena Conecta — Apoyo al migrante y guía de La Serena</title>
+  <title>Serena Conecta. Apoyo al migrante y guía de La Serena</title>
   <meta name="description" content="Serena Conecta reúne mapas de apoyo al migrante, ruta turística y recorridos de micro de La Serena: instituciones, consulados, paraderos y líneas en un solo lugar." />
   <meta name="author" content="Universidad de La Serena · Ilustre Municipalidad de La Serena" />
   <meta name="theme-color" content="#081f5c" />
@@ -53,9 +53,9 @@
   <header class="topbar">
     <div class="topbar__marca">
       <span class="topbar__logo">
-        <img src="assets/uls blanco y color para fondo azul.png" alt="Universidad de La Serena" />
+        <img src="assets/uls blanco y color para fondo azul.png" alt="Universidad de La Serena" decoding="async" />
       </span>
-      <img class="topbar__logo-muni" src="assets/muni-laserena-blanco.svg" alt="Municipalidad de La Serena" />
+      <img class="topbar__logo-muni" src="assets/muni-laserena-blanco.svg" alt="Municipalidad de La Serena" loading="lazy" decoding="async" />
       <span class="topbar__divisor"></span>
       <span class="topbar__titulo">Serena<span class="topbar__titulo-acento">Conecta</span></span>
     </div>
@@ -83,6 +83,7 @@
           <li data-idioma="en">English</li>
           <li data-idioma="de">Deutsch</li>
           <li data-idioma="pt">Português</li>
+          <li data-idioma="ht">Kreyòl</li>
         </ul>
       </div>
       <a class="topbar__ig" href="https://www.instagram.com/serenaconecta/" target="_blank" rel="noopener" aria-label="Instagram de Serena Conecta" title="@serenaconecta">
@@ -100,7 +101,7 @@
 
     <div class="sc-hero-grid">
       <div>
-        <span class="sc-eyebrow" data-i18n="quienesEtiqueta">Sobre nosotros</span>
+        <span class="sc-eyebrow sc-eyebrow--sin-guion" data-i18n="quienesEtiqueta">Sobre nosotros</span>
         <h1 class="sc-titulo">
           <span class="sc-titulo__arriba" data-i18n="quienesTitulo1">Quiénes</span>
           <span class="sc-titulo__script" data-i18n="quienesTitulo2">somos</span>
@@ -124,7 +125,7 @@
       </div>
 
       <div class="sc-hero-art">
-        <img class="sc-map" src="assets/portada.png" alt="Mapa de Latinoamérica Serena Conecta" />
+        <img class="sc-map" src="assets/portada.png" alt="Mapa de Latinoamérica Serena Conecta" loading="lazy" decoding="async" />
         <div class="sc-map-fallback">SERENA<br>CONECTA</div>
 
         <!-- Sello ciudad multicultural -->
@@ -210,7 +211,7 @@
   <section class="sc-purpose">
     <div class="sc-purpose-grid">
       <div class="sc-section-head">
-        <span class="sc-eyebrow">Lo que nos mueve</span>
+        <span class="sc-eyebrow sc-eyebrow--sin-guion">Lo que nos mueve</span>
         <h2>Nuestro propósito</h2>
         <div class="sc-underline"></div>
         <p>En Serena Conecta creemos que la información abre puertas. Reunimos en un solo lugar las redes de apoyo, los atractivos y transporte de La Serena, para que cada persona pueda orientarse, participar y sentirse parte de ella. Queremos fomentar el sello multicultural de la ciudad de La Serena, aportando para que la ciudad sea más equitativa, justa e inclusiva con la diversidad cultural. Queremos que las futuras generaciones se encuentren felices y orgullosas de vivir en nuestra ciudad.</p>
@@ -225,7 +226,7 @@
             <h3>Justicia</h3>
             <p>Promovemos el acceso equitativo a la información y a las redes de apoyo, con una cultura de respeto y responsabilidad social.</p>
           </div>
-          <img class="sc-illus" src="assets/justicia.jpg" alt="Justicia e igualdad de acceso" loading="lazy" />
+          <img class="sc-illus" src="assets/justicia.jpg" alt="Justicia e igualdad de acceso" loading="lazy" decoding="async" />
         </article>
 
         <article class="sc-card sc-card--orange">
@@ -235,7 +236,7 @@
             <h3>Inclusión</h3>
             <p>Valoramos la diversidad de quienes llegan y de quienes acogen, y trabajamos por una ciudad sin barreras.</p>
           </div>
-          <img class="sc-illus" src="assets/inclusion.jpg" alt="Inclusión y diversidad" loading="lazy" />
+          <img class="sc-illus" src="assets/inclusion.jpg" alt="Inclusión y diversidad" loading="lazy" decoding="async" />
         </article>
 
         <article class="sc-card sc-card--green">
@@ -245,7 +246,7 @@
             <h3>Sostenibilidad</h3>
             <p>Cuidamos nuestro entorno y promovemos un desarrollo que también beneficie a las generaciones futuras.</p>
           </div>
-          <img class="sc-illus" src="assets/sostenibilidad.jpg" alt="Sostenibilidad y cuidado del entorno" loading="lazy" />
+          <img class="sc-illus" src="assets/sostenibilidad.jpg" alt="Sostenibilidad y cuidado del entorno" loading="lazy" decoding="async" />
         </article>
       </div>
     </div>
@@ -365,7 +366,7 @@
   <section class="seccion-mapa seccion-micro" id="micros">
     <div class="seccion-mapa__cabecera">
       <div>
-        <span class="sc-eyebrow" data-i18n="microEyebrow">Muévete por la ciudad</span>
+        <span class="sc-eyebrow sc-eyebrow--sin-guion" data-i18n="microEyebrow">Muévete por la ciudad</span>
         <h2 class="seccion-mapa__titulo" data-i18n="microTitulo">Conéctate en Micro</h2>
       </div>
     </div>
@@ -436,6 +437,10 @@
         <button type="button" id="microCercaBtn" class="micro-accion micro-accion--primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/></svg>
           <span data-i18n="microNearbyBtn">Micros cerca de mí</span>
+        </button>
+        <button type="button" id="microFavBtn" class="micro-accion micro-accion--fav">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.13 6.57L12 17.55l-5.91 3.11 1.13-6.57L2.45 9.44l6.6-.96z"/></svg>
+          <span data-i18n="favBtn">Mis paraderos</span>
         </button>
       </div>
     </div>

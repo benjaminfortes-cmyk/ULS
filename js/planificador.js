@@ -100,6 +100,30 @@
     sentidoIda: 'Ida',
     sentidoVuelta: 'Volta'
   });
+  Object.assign(traducciones.ht, {
+    planTabExplorarT: 'Eksplore wout yo',
+    planTabExplorarD: 'Konnen liy yo: gade tout wout chak bis ak tout estasyon li yo.',
+    planTabPlanT: 'Planifye yon vwayaj',
+    planTabPlanD: 'Nou kalkile ki bis pou ou pran: kote pou monte ak kote pou desann.',
+    planIntro: 'Make kote ou ye, chwazi kote ou vle ale, epi n ap di w ki bis pou pran, nan ki estasyon pou monte ak kote pou desann.',
+    planPaso1: 'Kote ou ye?',
+    planUsarUbicacion: 'Sèvi ak kote m ye',
+    planOrigenHint: 'oswa tape sou kat la pou make kote ou kòmanse',
+    planPaso2: 'Kote ou prale?',
+    planDestinoPh: 'Chèche yon enstitisyon oswa yon kote touristik…',
+    planLimpiar: 'Rekòmanse',
+    planHint: 'Konplete etap 1 ak 2, epi bis ki bon pou vwayaj ou a ap parèt isit la.',
+    planFaltaDestino: 'Kote ou kòmanse a pare! Kounye a chwazi destinasyon ou nan etap 2.',
+    planFaltaOrigen: 'Destinasyon an pare! Kounye a make kote ou ye nan etap 1.',
+    planTitOpciones: 'Bis ki bon pou ou',
+    planVacio: 'Nou pa jwenn yon liy dirèk ant de pwen sa yo nan yon mach 800 m. Eseye yon lòt kote pou kòmanse.',
+    planSubeAqui: 'Monte isit la',
+    planBajaAqui: 'Desann isit la',
+    planResumen: 'Mache {dO} m jis « {sube} », vwayaje {n} estasyon epi desann nan « {baja} », a {dD} m de destinasyon ou.',
+    planCaminando: 'min ap mache antou',
+    sentidoIda: 'Ale',
+    sentidoVuelta: 'Retounen'
+  });
 
 
   const zonaExplorar = document.getElementById('microModoExplorar');
