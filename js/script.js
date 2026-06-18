@@ -728,6 +728,78 @@
         micros: 'Línea 1 y 2, Línea E01 y E02',
         coords: [-29.90534126872925, -71.2742469319079],
         grupo: 'turistica'
+      },
+      {
+        nombre: 'Biblioteca Regional Gabriela Mistral',
+        direccion: 'Juan José Latorre 782, 1700000 La Serena, Coquimbo',
+        horario: 'Martes a viernes 10:00 - 19:00 hrs. Sábado 11:30 - 18:00 hrs (Cerrado temporalmente por obras).',
+        descripcion: 'Hito de arquitectura moderna que rinde homenaje a la poetisa local. Funciona como un centro cultural clave para resguardar la memoria identitaria de la Región de Coquimbo.',
+        coords: [-29.905416502645867, -71.2635752706745],
+        grupo: 'turistica'
+      },
+      {
+        nombre: 'Iglesia de Santa Inés (Centro Cultural Santa Inés)',
+        direccion: 'Manuel Antonio Matta 35-21, 1710007 La Serena, Coquimbo',
+        horario: 'Lunes a viernes 9:00 - 17:30 hrs.',
+        descripcion: 'Construida en 1544, sufriendo diversos daños de infraestructura a lo largo de los años. En 2010 se convirtió en un importante espacio cultural para las distintas expresiones artísticas de la comuna. Es la única iglesia en nuestro país en transformarse en un centro cultural y combinar su rescate patrimonial con un punto de encuentro turístico, que permite el desarrollo artístico y cultural con eventos.',
+        coords: [-29.898168237025587, -71.2522091642139],
+        grupo: 'turistica'
+      },
+      {
+        nombre: 'Iglesia San Juan De Dios',
+        direccion: 'Av. Balmaceda 915, La Serena, Coquimbo',
+        horario: 'Martes y viernes 10:00 - 13:00 hrs. Miércoles y jueves 10:00 - 16:00 hrs. Domingo 8:30 - 11:30 hrs.',
+        descripcion: 'Templo colonial de madera y adobe construido a inicios del siglo XIX en La Serena.',
+        coords: [-29.9076254645411, -71.24947728305116],
+        grupo: 'turistica'
+      },
+      {
+        nombre: 'Capilla y Claustro Casa de La Provincia',
+        direccion: 'Justo Donoso 460, 1700000 La Serena, Coquimbo',
+        horario: 'Cerrada al público.',
+        descripcion: 'Conjunto arquitectónico neoclásico construido en adobe y ladrillo a finales del siglo XIX en La Serena. Destaca por sus grandes patios interiores, coloridos vitrales y por haber albergado históricamente un convento, un orfanato y un colegio de las Hermanas de la Providencia.',
+        coords: [-29.902288338768614, -71.24045759861995],
+        grupo: 'turistica'
+      },
+      {
+        nombre: 'Casa Museo Gabriela Mistral',
+        direccion: 'Avda. Fco de Aguirre 0300, La Serena, Coquimbo',
+        horario: 'Lunes a viernes 9:00 - 17:00 hrs.',
+        descripcion: 'La Casa de Las Palmeras es el único hogar propio que Gabriela Mistral compró en Chile, adquirido en 1925 tras su regreso de México. Hoy es un Monumento Histórico que funciona como centro cultural, preservando el sueño de la poetisa de crear una escuela experimental en su tierra natal.',
+        coords: [-29.905416502645867, -71.2635752706745],
+        grupo: 'turistica'
+      },
+      {
+        nombre: 'Sitio de Memoria Cuartel Casa de Piedra (ex CNI)',
+        direccion: 'Colo Colo 10, La Serena, Coquimbo',
+        horario: 'El recinto no mantiene un horario de atención fijo. Las aperturas y los recorridos guiados se gestionan de forma excepcional o durante fechas conmemorativas.',
+        descripcion: 'Inmueble neocolonial en La Serena que funcionó entre 1982 y 1985 como un centro clandestino de detención, operaciones y tortura a cargo de la Central Nacional de Informaciones (CNI).',
+        coords: [-29.907910092451488, -71.23477892672764],
+        grupo: 'turistica'
+      },
+      {
+        nombre: 'Parque Santa Lucía',
+        direccion: 'Parque Santa Lucía, Regimiento, 1700000 La Serena, Coquimbo',
+        horario: 'Todos los días 9:00 - 18:00 hrs.',
+        descripcion: 'Histórico mirador urbano de La Serena rediseñado por el paisajista alemán Óscar Prager durante el Plan Serena. Destaca por albergar atractivos como un carillón colonial, la escultura Susana saliendo del baño y coloridas bancas de azulejos españoles.',
+        coords: [-29.904929711595344, -71.24101848840681],
+        grupo: 'turistica'
+      },
+      {
+        nombre: 'Ex Estación de Trenes La Serena (Centro Cultural)',
+        direccion: 'Ruta 5 272, La Serena, Coquimbo',
+        horario: 'Lunes a viernes 9:00 - 17:30 hrs.',
+        descripcion: 'Edificio neocolonial construido en 1944 como parte del Plan Serena. Funcionó hasta 1975 como un eje clave para el transporte y el histórico "Tren Elquino". Hoy funciona como centro cultural, destacando en su vestíbulo el monumental mural "Historia de La Serena" de Gregorio de la Fuente.',
+        coords: [-29.902621627424374, -71.25666398089075],
+        grupo: 'turistica'
+      },
+      {
+        nombre: 'Plaza de Los Periodistas',
+        direccion: 'Arturo Prat 300, 1710088 La Serena, Coquimbo',
+        horario: 'Abierto las 24 horas.',
+        descripcion: 'Espacio público en el centro histórico de La Serena que rinde homenaje a los profesionales de la prensa.',
+        coords: [-29.901805504927413, -71.25133958037269],
+        grupo: 'turistica'
       }
     ];
 
@@ -1087,7 +1159,6 @@
           { n: 'Alejandro Flores, 1946-1950', c: [-29.882755427135542, -71.24770043376127] },
           { n: 'Nicaragua, 1510-1580', c: [-29.886555408205965, -71.24263646441806] },
           { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
-          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Liber Bernardo O\'Higgins, 101-199', c: [-29.899131030562174, -71.2482637355721] },
           { n: 'Los Carrera, 216-260', c: [-29.89936122192691, -71.25076354907347] },
           { n: 'Colón, 335-399', c: [-29.899503032988246, -71.25217975091144] },
@@ -1144,7 +1215,6 @@
           { n: 'La Estrella, 3204-3294', c: [-29.887401941661448, -71.23758069936817] },
           { n: 'Nicaragua, 1510-1580', c: [-29.886555408205965, -71.24263646441806] },
           { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
-          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Liber Bernardo O\'Higgins, 101-199', c: [-29.899131030562174, -71.2482637355721] },
           { n: 'Los Carrera, 216-260', c: [-29.89936122192691, -71.25076354907347] },
           { n: 'Colón, 335-399', c: [-29.899503032988246, -71.25217975091144] },
@@ -1178,7 +1248,6 @@
           { n: 'Diecinueve De Junio, 1711-1777', c: [-29.884079896700662, -71.24519530673443] },
           { n: 'La Conquista, 1605-1629', c: [-29.885485699781867, -71.24577466440887] },
           { n: 'Bandera', c: [-29.88601126909742, -71.24345185014354] },
-          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Liber Bernardo O\'Higgins, 101-199', c: [-29.899131030562174, -71.2482637355721] },
           { n: 'Los Carrera, 216-260', c: [-29.899482132936626, -71.25080646441206] },
@@ -1298,7 +1367,6 @@
           { n: 'El Brillador', c: [-29.88086698015799, -71.25018950376477] },
           { n: 'Sady Zañartu, 2046-2074', c: [-29.884206579533092, -71.25015740376462] },
           { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
-          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Liber Bernardo O\'Higgins, 101-199', c: [-29.899131030562174, -71.2482637355721] },
           { n: 'Los Carrera, 216-260', c: [-29.89936122192691, -71.25076354907347] },
           { n: 'Colón, 335-399', c: [-29.899503032988246, -71.25217975091144] },
@@ -1370,7 +1438,6 @@
           { n: 'Guatemala, 2749-2799', c: [-29.88050889664148, -71.24091450674578] },
           { n: 'Nicaragua, 1510-1580', c: [-29.886555408205965, -71.24263646441806] },
           { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
-          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Liber Bernardo O\'Higgins, 101-199', c: [-29.899131030562174, -71.2482637355721] },
           { n: 'Los Carrera, 216-260', c: [-29.899482132936626, -71.25080646441806] },
           { n: 'Colón, 335-399', c: [-29.899503032988246, -71.25217975091144] },
@@ -1384,7 +1451,6 @@
           { n: 'Paradero 2', c: [-29.916035032568875, -71.25280602883615] },
           { n: 'Balmaceda, 1701-1885', c: [-29.91765194474557, -71.25396611349153] },
           { n: 'Balmaceda, 2295-2735', c: [-29.92294307784552, -71.25655170674574] },
-          { n: 'Balmaceda, 2295-2735', c: [-29.92294307784552, -71.25655170674574] },
           { n: 'Balmaceda, 2581-2865', c: [-29.92410068301468, -71.25714717976267] },
           { n: 'Paradero 6', c: [-29.92771548517216, -71.25837290674575] },
           { n: 'Paradero 7', c: [-29.93198559295166, -71.25971676441809] },
@@ -1392,7 +1458,6 @@
           { n: 'Paradero 9', c: [-29.939516512505783, -71.26244183558191] },
           { n: 'Paradero 10', c: [-29.942210321087448, -71.26424703558195] },
           { n: 'Paradero 11', c: [-29.945870825274707, -71.26688363558193] },
-          { n: 'Micaela Godoy De Julia', c: [-29.95528076175616, -71.26785723558193] },
           { n: 'Micaela Godoy De Julia', c: [-29.95528076175616, -71.26785723558193] },
           { n: 'Linares, 321', c: [-29.961434351594686, -71.26361667976266] },
           { n: 'Linares, 801-899', c: [-29.962124432807485, -71.25644983558193] },
@@ -1494,7 +1559,6 @@
           { n: 'Gaspar Marín, 3202-3298', c: [-29.883471682008167, -71.23640300376466] },
           { n: 'Gaspar Marín, 2741-2799', c: [-29.882206577452685, -71.24158507492892] },
           { n: 'Nicaragua, 1510-1580', c: [-29.886555408205965, -71.24263646441806] },
-          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Liber Bernardo O\'higgins, 101-199', c: [-29.899131030562174, -71.2482637355721] },
           { n: 'Los carrera, 216-260', c: [-29.89936122192691, -71.25076354907347] },
@@ -1719,7 +1783,6 @@
           { n: 'Monjitas, 2301-2399', c: [-29.878192492211678, -71.24618235092647] },
           { n: 'Gaspar Marín, 2741-2799', c: [-29.88199729704393, -71.24159043557316] },
           { n: 'Nicaragua, 1510-1580', c: [-29.886555408205965, -71.24263646441806] },
-          { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Nicaragua, 1460', c: [-29.891094715297562, -71.24373616440414] },
           { n: 'Almagro, 506', c: [-29.898161627573607, -71.24924550674578] },
           { n: 'Pedro Pablo Muñoz, 104', c: [-29.898454928216974, -71.25342803558193] },
