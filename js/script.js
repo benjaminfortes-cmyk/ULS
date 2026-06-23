@@ -470,7 +470,7 @@
         categoria: 3
       },
       {
-        nombre: 'FOSIS',
+        nombre: 'Fondo de Solidaridad e Inversión Social (FOSIS)',
         direccion: 'Av. Francisco de Aguirre 781, La Serena',
         contacto: '(51) 2207000',
         objetivo: 'Ofrece programas de emprendimiento, capacitación y apoyo económico para personas vulnerables y migrantes (con cédula de identidad).',
@@ -488,7 +488,7 @@
         categoria: 3
       },
       {
-        nombre: 'SERMIG',
+        nombre: 'Servicio Nacional de Migraciones de Chile (SERMIG)',
         direccion: 'Av. El Santo 1462, La Serena',
         contacto: 'No especificado',
         objetivo: 'Proporciona acompañamiento en procesos migratorios y derivación a redes de apoyo.',
