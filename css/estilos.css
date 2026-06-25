@@ -1143,6 +1143,16 @@ html, body {
   display: none;
 }
 
+/* Pin de instituciones de salud con cruz médica */
+.pin--salud {
+  width: 32px;
+  height: 32px;
+}
+
+.pin--salud::after {
+  display: none;
+}
+
 
 .pin__glyph {
   position: absolute;

@@ -454,7 +454,6 @@
       {
         nombre: 'Casa Migrantes Diversidad y Pueblos Originarios (Muni. La Serena)',
         direccion: 'Libertador Bernardo O´Higgins 150, La Serena',
-        contacto: 'pamela.leon@laserena.cl',
         objetivo: 'Entrega atención integral de manera gratuita y con enfoque de derechos a toda persona que ha sido discriminada en el marco del programa municipal.',
         coords: [-29.898967256512737, -71.24797637608843],
         grupo: 'inmigrantes',
@@ -574,6 +573,195 @@
         contacto: '(51) 2 253882',
         objetivo: 'Facilita servicios de atención primaria de salud, alta resolutividad, toma de muestras y rayos X sin riesgo vital.',
         coords: [-29.878206022436785, -71.24522317830619],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+
+      // ===== Instituciones de salud =====
+      {
+        nombre: 'Servicio de Atención Primaria de Urgencia Cardenal Caro',
+        direccion: 'Avenida 4 Esquinas n° 89',
+        contacto: '512571836',
+        horario: '17:00 a 00:00 hrs.',
+        objetivo: 'Servicio de Atención Primaria de Urgencia (SAPU): atención de urgencia de baja complejidad fuera del horario hábil.',
+        coords: [-29.93272362217175, -71.2581718368054],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Servicio de Atención Primaria de Urgencia Emilio Schaffhauser',
+        direccion: 'Avenida Francisco de Aguirre n° 542',
+        contacto: '512221203',
+        horario: 'Lunes a Jueves: 17:00 a 08:00 hrs. Viernes: 16:00 a 08:00 hrs. Fines de semana y festivos: 24 horas.',
+        objetivo: 'Servicio de Atención Primaria de Urgencia (SAPU): atención de urgencia de baja complejidad fuera del horario hábil.',
+        coords: [-29.90581086228118, -71.24970393005945],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Servicio de Atención Primaria de Urgencia Juan Pablo II',
+        direccion: 'Avenida Isidoro Campaña N° 3397',
+        contacto: '512672985',
+        horario: 'Lunes a Viernes: 18:00 a 00:00 hrs. Sábados, Domingos y Festivos: 24 horas.',
+        objetivo: 'Servicio de Atención Primaria de Urgencia (SAPU): atención de urgencia de baja complejidad fuera del horario hábil.',
+        coords: [-29.867356012996893, -71.22985654233099],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Servicio de Atención Primaria de Urgencia Las Compañías',
+        direccion: 'Calle Esmeralda N° 2422',
+        contacto: '512253882',
+        horario: 'Lunes a Jueves: 17:00 a 00:00 hrs. Viernes: 16:00 a 00:00 hrs. Sábados, domingos y festivos: 08:00 a 00:00 hrs.',
+        objetivo: 'Servicio de Atención Primaria de Urgencia (SAPU): atención de urgencia de baja complejidad fuera del horario hábil.',
+        coords: [-29.877911675262645, -71.24489462698378],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Servicio de Atención Primaria de Urgencia Pedro Aguirre Cerda',
+        direccion: 'Calle Emilio Bello número 918',
+        contacto: '512270680',
+        horario: 'Lunes a Viernes: 17:00 a 00:00 hrs. Sábados, domingos y festivos: 08:00 a 12:00 hrs.',
+        objetivo: 'Servicio de Atención Primaria de Urgencia (SAPU): atención de urgencia de baja complejidad fuera del horario hábil.',
+        coords: [-29.91611561295196, -71.2187834920649],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Servicio de Atención Primaria de Urgencia Raúl Silva Henríquez',
+        direccion: 'Avenida La Paz número 2070',
+        contacto: '512333893 – 512333892',
+        horario: 'Lunes a Jueves: 17:00 a 08:00 hrs. Viernes: 16:00 a 08:00 hrs. Fines de semana y festivos: 24 horas.',
+        objetivo: 'Servicio de Atención Primaria de Urgencia (SAPU): atención de urgencia de baja complejidad fuera del horario hábil.',
+        coords: [-29.880799687116657, -71.22454345767207],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro de Salud Familiar Cardenal Caro',
+        direccion: 'Avenida 4 Esquinas n° 89',
+        contacto: '512296963',
+        horario: 'Lunes a Jueves: 08:00 a 17:00 hrs. Viernes: 08:00 a 16:00 hrs.',
+        objetivo: 'Centro de Salud Familiar (CESFAM): atención primaria de salud, controles, exámenes y derivaciones.',
+        coords: [-29.932608495366214, -71.25838645767209],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro de Salud Familiar Cardenal Raúl Silva Henríquez',
+        direccion: 'Avenida La Paz n° 2470',
+        contacto: '512257782',
+        horario: 'Lunes a Jueves: 08:00 a 17:00 hrs. Viernes: 08:00 a 16:00 hrs.',
+        objetivo: 'Centro de Salud Familiar (CESFAM): atención primaria de salud, controles, exámenes y derivaciones.',
+        coords: [-29.881010687982766, -71.22459],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro de Salud Familiar Dr. Emilio Schaffhauser',
+        direccion: 'Avenida Francisco de Aguirre n° 255',
+        contacto: '512221087',
+        horario: 'Lunes a Viernes: 08:00 a 16:30 hrs.',
+        objetivo: 'Centro de Salud Familiar (CESFAM): atención primaria de salud, controles, exámenes y derivaciones.',
+        coords: [-29.905381589586316, -71.24971391534415],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro de Salud Familiar Juan Pablo II (La Serena)',
+        direccion: 'Calle Isidora Campaña n° 3397',
+        horario: 'Lunes a Jueves: 08:00 a 17:00 hrs. Viernes: 08:00 a 16:00 hrs.',
+        objetivo: 'Centro de Salud Familiar (CESFAM): atención primaria de salud, controles, exámenes y derivaciones.',
+        coords: [-29.868093770566144, -71.23016084747597],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro de Salud Familiar Las Compañías',
+        direccion: 'Calle Esmeralda n° 2422',
+        contacto: '512253882',
+        horario: '08:00 a 13:00 hrs.',
+        objetivo: 'Centro de Salud Familiar (CESFAM): atención primaria de salud, controles, exámenes y derivaciones.',
+        coords: [-29.878229871724436, -71.24516845380931],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro de Salud Familiar Pedro Aguirre Cerda',
+        direccion: 'Calle Emilio Bello n° 918',
+        contacto: '512253882',
+        horario: '08:00 a 17:00 hrs.',
+        objetivo: 'Centro de Salud Familiar (CESFAM): atención primaria de salud, controles, exámenes y derivaciones.',
+        coords: [-29.91620535436629, -71.21896506686765],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro Comunitario de Salud Familiar Arcos de Pinamar',
+        direccion: 'Calle Salvador Reyes esquina Brillador N° 2061',
+        horario: 'Lunes a Viernes: 08:00 a 16:30 hrs.',
+        objetivo: 'Centro Comunitario de Salud Familiar (CECOSF): atención primaria de salud cercana a la comunidad.',
+        coords: [-29.886637008233787, -71.25179016065873],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro Comunitario de Salud Familiar Lambert',
+        direccion: 'Pasaje Ernestina Aguirre número 4270',
+        contacto: '512251532',
+        objetivo: 'Centro Comunitario de Salud Familiar (CECOSF): atención primaria de salud cercana a la comunidad.',
+        coords: [-29.886264428795407, -71.22635844483246],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro Comunitario de Salud Familiar Villa Alemania',
+        direccion: 'Calle Antonio n° 2834',
+        contacto: '512281570',
+        objetivo: 'Centro Comunitario de Salud Familiar (CECOSF): atención primaria de salud cercana a la comunidad.',
+        coords: [-29.871570282460475, -71.23841357809462],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Centro Comunitario de Salud Familiar Villa el Indio',
+        direccion: 'Calle Las Araucarias 4840, 4848',
+        contacto: '512336020',
+        objetivo: 'Centro Comunitario de Salud Familiar (CECOSF): atención primaria de salud cercana a la comunidad.',
+        coords: [-29.943836389117482, -71.2619491453181],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Posta de Salud Rural Algarrobito',
+        direccion: 'Calle Callejón Carlos Mery N° S/N',
+        objetivo: 'Posta de Salud Rural: atención primaria de salud para sectores rurales.',
+        coords: [-29.94081490580648, -71.14648666031118],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Posta de Salud Rural El Romero',
+        direccion: 'D-255 113, El Romero, La Serena, Coquimbo',
+        objetivo: 'Posta de Salud Rural: atención primaria de salud para sectores rurales.',
+        coords: [-29.88947320431564, -71.14063703523772],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Posta de Salud Rural Lambert',
+        direccion: 'Calle única # S/N',
+        objetivo: 'Posta de Salud Rural: atención primaria de salud para sectores rurales.',
+        coords: [-29.841345579853993, -71.1192126296],
+        grupo: 'inmigrantes',
+        categoria: 2
+      },
+      {
+        nombre: 'Posta de Salud Rural Las Rojas',
+        direccion: 'Las Rojas, La Serena, Coquimbo',
+        objetivo: 'Posta de Salud Rural: atención primaria de salud para sectores rurales.',
+        coords: [-29.977389259209932, -71.05832997538751],
         grupo: 'inmigrantes',
         categoria: 2
       },
@@ -820,11 +1008,27 @@
         <path d="M5 4.5 C8 2.5, 11 6.5, 14 4.5 C16 3.2, 18 4, 19.5 4 L19.5 12.5 C16 14.5, 12 10.5, 8.5 12.5 C7 13.3, 6 12.7, 5 12.5"/>
       </svg>`;
 
+    // Cruz médica para las instituciones de salud
+    const svgSalud = `
+      <svg class="pin__glyph" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <path d="M9.6 3 h4.8 v6.2 h6.2 v4.8 h-6.2 v6.2 h-4.8 v-6.2 h-6.2 v-4.8 h6.2 z"/>
+      </svg>`;
+
     function crearIcono(lugar) {
       if (lugar.grupo === 'turistica') {
         return L.divIcon({
           className: 'marcador-pin',
           html: `<span class="pin pin--verde pin--faro">${svgFaro}</span>`,
+          iconSize: [32, 42],
+          iconAnchor: [16, 40],
+          popupAnchor: [0, -38]
+        });
+      }
+      // Instituciones de salud pin con cruz médica
+      if (lugar.categoria === 2) {
+        return L.divIcon({
+          className: 'marcador-pin',
+          html: `<span class="pin pin--cat2 pin--salud">${svgSalud}</span>`,
           iconSize: [32, 42],
           iconAnchor: [16, 40],
           popupAnchor: [0, -38]
