@@ -444,7 +444,7 @@
     Object.assign(traducciones.es, {
       contactoEyebrow: 'Soporte',
       contactoTitulo: 'Comentarios y sugerencias',
-      contactoIntro: '¿Tienes una sugerencia para mejorar la plataforma o detectaste algo que podemos arreglar? Cuéntanos y lo tendremos en cuenta.',
+      contactoIntro: '¿Tienes una sugerencia para mejorar la plataforma o detectaste algo que podemos arreglar? Cuéntanos.',
       contactoNombre: 'Tu nombre',
       contactoCorreo: 'Tu correo',
       contactoMensaje: 'Tu comentario, sugerencia o reporte de un problema…',
@@ -457,7 +457,7 @@
     Object.assign(traducciones.en, {
       contactoEyebrow: 'Support',
       contactoTitulo: 'Comments and suggestions',
-      contactoIntro: 'Do you have a suggestion to improve the platform or spotted something we can fix? Tell us and we’ll take it into account.',
+      contactoIntro: 'Do you have a suggestion to improve the platform or spotted something we can fix? Tell us.',
       contactoNombre: 'Your name',
       contactoCorreo: 'Your email',
       contactoMensaje: 'Your comment, suggestion or problem report…',
@@ -470,7 +470,7 @@
     Object.assign(traducciones.de, {
       contactoEyebrow: 'Support',
       contactoTitulo: 'Kommentare und Vorschläge',
-      contactoIntro: 'Haben Sie einen Vorschlag zur Verbesserung der Plattform oder etwas entdeckt, das wir beheben können? Sagen Sie es uns und wir berücksichtigen es.',
+      contactoIntro: 'Haben Sie einen Vorschlag zur Verbesserung der Plattform oder etwas entdeckt, das wir beheben können? Sagen Sie es uns.',
       contactoNombre: 'Ihr Name',
       contactoCorreo: 'Ihre E-Mail',
       contactoMensaje: 'Ihr Kommentar, Vorschlag oder Ihre Problemmeldung…',
@@ -483,7 +483,7 @@
     Object.assign(traducciones.pt, {
       contactoEyebrow: 'Suporte',
       contactoTitulo: 'Comentários e sugestões',
-      contactoIntro: 'Tem uma sugestão para melhorar a plataforma ou encontrou algo que podemos corrigir? Conte para nós e levaremos em consideração.',
+      contactoIntro: 'Tem uma sugestão para melhorar a plataforma ou encontrou algo que podemos corrigir? Conte para nós.',
       contactoNombre: 'Seu nome',
       contactoCorreo: 'Seu e-mail',
       contactoMensaje: 'Seu comentário, sugestão ou relato de um problema…',
@@ -496,7 +496,7 @@
     Object.assign(traducciones.ht, {
       contactoEyebrow: 'Sipò',
       contactoTitulo: 'Kòmantè ak sijesyon',
-      contactoIntro: 'Èske ou gen yon sijesyon pou amelyore platfòm nan oswa ou jwenn yon bagay nou ka ranje? Di nou epi n ap pran l an kont.',
+      contactoIntro: 'Èske ou gen yon sijesyon pou amelyore platfòm nan oswa ou jwenn yon bagay nou ka ranje? Di nou.',
       contactoNombre: 'Non ou',
       contactoCorreo: 'Imèl ou',
       contactoMensaje: 'Kòmantè, sijesyon oswa rapò yon pwoblèm ou…',
@@ -2859,7 +2859,7 @@
           msg.classList.add('sc-contacto__msg--error', 'visible');
           return;
         }
-        if (honey) return; 
+        if (honey) return;
 
         const original = btnSpan.textContent;
         btn.disabled = true;
