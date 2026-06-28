@@ -1,11 +1,12 @@
 // PARA MI PAW HECHO POR BENJAMIN FORTES EJEJEJE
-const CACHE = 'serena-conecta-v2';
+const CACHE = 'serena-conecta-v3';
 
 
 const ASSETS = [
   './',
   './index.html',
   './css/estilos.css',
+  './js/datos-i18n.js',
   './js/script.js',
   './js/planificador.js',
   './manifest.webmanifest',

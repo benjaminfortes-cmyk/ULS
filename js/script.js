@@ -318,6 +318,128 @@
       }
     };
 
+    // ===== Diccionario secciones de la landing  =====
+    Object.assign(traducciones.es, {
+      cardApoyoD: 'Brindamos orientación y recursos a quienes buscan nuevas oportunidades.',
+      cardRutaD: 'Descubre los lugares, historias y atractivos que nos hacen únicos.',
+      cardVisibilidadT: 'Visibilidad',
+      cardVisibilidadD: 'Damos visibilidad a las historias, los aportes y las necesidades de la comunidad migrante.',
+      cardComunidadT: 'Comunidad',
+      cardComunidadD: 'Conecta, participa y sé parte de una comunidad que transforma.',
+      propositoEyebrow: 'Lo que nos mueve',
+      propositoTitulo: 'Nuestro propósito',
+      propositoTexto: 'En Serena Conecta creemos que la información abre puertas. Reunimos en un solo lugar las redes de apoyo, los atractivos y transporte de La Serena, para que cada persona pueda orientarse, participar y sentirse parte de ella. Queremos fomentar el sello multicultural de la ciudad de La Serena, aportando para que la ciudad sea más equitativa, justa e inclusiva con la diversidad cultural. Queremos que las futuras generaciones se encuentren felices y orgullosas de vivir en nuestra ciudad.',
+      propositoQuote: 'La diversidad cultural es una fuerza motriz del desarrollo',
+      valorJusticiaT: 'Justicia',
+      valorJusticiaD: 'Promovemos el acceso equitativo a la información y a las redes de apoyo, con una cultura de respeto y responsabilidad social.',
+      valorInclusionT: 'Inclusión',
+      valorInclusionD: 'Valoramos la diversidad de quienes llegan y de quienes acogen, y trabajamos por una ciudad sin barreras.',
+      valorSostenibilidadT: 'Sostenibilidad',
+      valorSostenibilidadD: 'Cuidamos nuestro entorno y promovemos un desarrollo que también beneficie a las generaciones futuras.',
+      mapasTitulo: 'Nuestros mapas',
+      stat1: 'instituciones de apoyo',
+      stat2: 'puntos turísticos',
+      stat3: 'líneas de micro',
+      stat4: 'idiomas disponibles',
+      footerFollow: 'Síguenos en Instagram'
+    });
+    Object.assign(traducciones.en, {
+      cardApoyoD: 'We provide guidance and resources to those seeking new opportunities.',
+      cardRutaD: 'Discover the places, stories and attractions that make us unique.',
+      cardVisibilidadT: 'Visibility',
+      cardVisibilidadD: 'We give visibility to the stories, contributions and needs of the migrant community.',
+      cardComunidadT: 'Community',
+      cardComunidadD: 'Connect, take part and be part of a community that transforms.',
+      propositoEyebrow: 'What drives us',
+      propositoTitulo: 'Our purpose',
+      propositoTexto: 'At Serena Conecta we believe that information opens doors. We bring together in one place the support networks, attractions and transport of La Serena, so that everyone can find their way, take part and feel part of the city. We want to nurture the multicultural character of La Serena, helping the city become more equitable, fair and inclusive of cultural diversity. We want future generations to be happy and proud to live in our city.',
+      propositoQuote: 'Cultural diversity is a driving force of development',
+      valorJusticiaT: 'Justice',
+      valorJusticiaD: 'We promote equitable access to information and support networks, with a culture of respect and social responsibility.',
+      valorInclusionT: 'Inclusion',
+      valorInclusionD: 'We value the diversity of those who arrive and those who welcome them, and we work for a city without barriers.',
+      valorSostenibilidadT: 'Sustainability',
+      valorSostenibilidadD: 'We care for our environment and promote development that also benefits future generations.',
+      mapasTitulo: 'Our maps',
+      stat1: 'support institutions',
+      stat2: 'tourist spots',
+      stat3: 'bus lines',
+      stat4: 'available languages',
+      footerFollow: 'Follow us on Instagram'
+    });
+    Object.assign(traducciones.de, {
+      cardApoyoD: 'Wir bieten Orientierung und Ressourcen für alle, die neue Chancen suchen.',
+      cardRutaD: 'Entdecke die Orte, Geschichten und Sehenswürdigkeiten, die uns einzigartig machen.',
+      cardVisibilidadT: 'Sichtbarkeit',
+      cardVisibilidadD: 'Wir machen die Geschichten, Beiträge und Bedürfnisse der Migrantengemeinschaft sichtbar.',
+      cardComunidadT: 'Gemeinschaft',
+      cardComunidadD: 'Verbinde dich, mach mit und sei Teil einer Gemeinschaft, die etwas verändert.',
+      propositoEyebrow: 'Was uns antreibt',
+      propositoTitulo: 'Unser Anliegen',
+      propositoTexto: 'Bei Serena Conecta glauben wir, dass Information Türen öffnet. Wir bündeln an einem Ort die Unterstützungsnetzwerke, Sehenswürdigkeiten und Verkehrsmittel von La Serena, damit sich jede Person orientieren, teilnehmen und sich als Teil der Stadt fühlen kann. Wir möchten den multikulturellen Charakter der Stadt La Serena fördern und dazu beitragen, dass die Stadt gerechter, fairer und offener für kulturelle Vielfalt wird. Wir wünschen uns, dass zukünftige Generationen glücklich und stolz sind, in unserer Stadt zu leben.',
+      propositoQuote: 'Kulturelle Vielfalt ist eine treibende Kraft der Entwicklung',
+      valorJusticiaT: 'Gerechtigkeit',
+      valorJusticiaD: 'Wir fördern den gerechten Zugang zu Informationen und Unterstützungsnetzwerken, mit einer Kultur des Respekts und der sozialen Verantwortung.',
+      valorInclusionT: 'Inklusion',
+      valorInclusionD: 'Wir schätzen die Vielfalt derer, die ankommen, und derer, die sie aufnehmen, und arbeiten für eine Stadt ohne Barrieren.',
+      valorSostenibilidadT: 'Nachhaltigkeit',
+      valorSostenibilidadD: 'Wir schützen unsere Umwelt und fördern eine Entwicklung, die auch künftigen Generationen zugutekommt.',
+      mapasTitulo: 'Unsere Karten',
+      stat1: 'Hilfseinrichtungen',
+      stat2: 'Sehenswürdigkeiten',
+      stat3: 'Buslinien',
+      stat4: 'verfügbare Sprachen',
+      footerFollow: 'Folge uns auf Instagram'
+    });
+    Object.assign(traducciones.pt, {
+      cardApoyoD: 'Oferecemos orientação e recursos a quem busca novas oportunidades.',
+      cardRutaD: 'Descubra os lugares, histórias e atrativos que nos tornam únicos.',
+      cardVisibilidadT: 'Visibilidade',
+      cardVisibilidadD: 'Damos visibilidade às histórias, contribuições e necessidades da comunidade migrante.',
+      cardComunidadT: 'Comunidade',
+      cardComunidadD: 'Conecte-se, participe e faça parte de uma comunidade que transforma.',
+      propositoEyebrow: 'O que nos move',
+      propositoTitulo: 'Nosso propósito',
+      propositoTexto: 'Na Serena Conecta acreditamos que a informação abre portas. Reunimos em um só lugar as redes de apoio, os atrativos e o transporte de La Serena, para que cada pessoa possa se orientar, participar e se sentir parte dela. Queremos fomentar o caráter multicultural da cidade de La Serena, contribuindo para que a cidade seja mais equitativa, justa e inclusiva com a diversidade cultural. Queremos que as futuras gerações sejam felizes e orgulhosas de viver na nossa cidade.',
+      propositoQuote: 'A diversidade cultural é uma força motriz do desenvolvimento',
+      valorJusticiaT: 'Justiça',
+      valorJusticiaD: 'Promovemos o acesso equitativo à informação e às redes de apoio, com uma cultura de respeito e responsabilidade social.',
+      valorInclusionT: 'Inclusão',
+      valorInclusionD: 'Valorizamos a diversidade de quem chega e de quem acolhe, e trabalhamos por uma cidade sem barreiras.',
+      valorSostenibilidadT: 'Sustentabilidade',
+      valorSostenibilidadD: 'Cuidamos do nosso ambiente e promovemos um desenvolvimento que também beneficie as gerações futuras.',
+      mapasTitulo: 'Nossos mapas',
+      stat1: 'instituições de apoio',
+      stat2: 'pontos turísticos',
+      stat3: 'linhas de ônibus',
+      stat4: 'idiomas disponíveis',
+      footerFollow: 'Siga-nos no Instagram'
+    });
+    Object.assign(traducciones.ht, {
+      cardApoyoD: 'Nou bay oryantasyon ak resous pou moun k ap chèche nouvo opòtinite.',
+      cardRutaD: 'Dekouvri kote, istwa ak atraksyon ki fè nou inik.',
+      cardVisibilidadT: 'Vizibilite',
+      cardVisibilidadD: 'Nou bay vizibilite a istwa, kontribisyon ak bezwen kominote migran an.',
+      cardComunidadT: 'Kominote',
+      cardComunidadD: 'Konekte, patisipe epi vin yon pati nan yon kominote k ap transfòme.',
+      propositoEyebrow: 'Sa k ap motive nou',
+      propositoTitulo: 'Objektif nou',
+      propositoTexto: 'Nan Serena Conecta nou kwè enfòmasyon ouvri pòt. Nou rasanble nan yon sèl kote rezo sipò, atraksyon ak transpò La Serena, pou chak moun ka oryante tèt yo, patisipe epi santi yo fè pati vil la. Nou vle ankouraje karaktè miltikiltirèl vil La Serena, pou ede vil la vin pi ekitab, jis epi enklizif ak divèsite kiltirèl. Nou vle jenerasyon k ap vini yo kontan epi fyè pou yo viv nan vil nou an.',
+      propositoQuote: 'Divèsite kiltirèl se yon fòs ki pouse devlopman',
+      valorJusticiaT: 'Jistis',
+      valorJusticiaD: 'Nou ankouraje aksè ekitab a enfòmasyon ak rezo sipò, ak yon kilti respè ak responsablite sosyal.',
+      valorInclusionT: 'Enklizyon',
+      valorInclusionD: 'Nou valorize divèsite moun k ap rive yo ak moun k ap akeyi yo, epi nou travay pou yon vil san baryè.',
+      valorSostenibilidadT: 'Dirabilite',
+      valorSostenibilidadD: 'Nou pran swen anviwònman nou epi nou ankouraje yon devlopman ki benefisye jenerasyon k ap vini yo tou.',
+      mapasTitulo: 'Kat nou yo',
+      stat1: 'enstitisyon sipò',
+      stat2: 'pwen touristik',
+      stat3: 'liy bis',
+      stat4: 'lang disponib',
+      footerFollow: 'Swiv nou sou Instagram'
+    });
+
     let idiomaActual = 'es';
     // Último lugar mostrado en cada panel 
     let seleccionInfo = null;
@@ -328,6 +450,13 @@
       return lugar.grupo === 'turistica' ? info2 : info;
     }
 
+    // Traduce un dato sino deuvle españl
+    function trDato(s) {
+      if (!s || typeof datosI18n === 'undefined') return s;
+      const m = datosI18n[s];
+      return (m && m[idiomaActual]) ? m[idiomaActual] : s;
+    }
+
     function mostrarInfo(lugar) {
       if (lugar.grupo === 'turistica') seleccionInfo2 = lugar;
       else seleccionInfo = lugar;
@@ -336,9 +465,9 @@
       let html = `<h3>${lugar.nombre}</h3>`;
       html += `<p><strong>${t.direccion}:</strong> ${lugar.direccion}</p>`;
       if (lugar.contacto) html += `<p><strong>${t.contacto}:</strong> ${lugar.contacto}</p>`;
-      if (lugar.horario) html += `<p><strong>${t.horario}:</strong> ${lugar.horario}</p>`;
-      if (lugar.objetivo) html += `<p><strong>${t.objetivo}:</strong> ${lugar.objetivo}</p>`;
-      if (lugar.descripcion) html += `<p><strong>${t.descripcion}:</strong> ${lugar.descripcion}</p>`;
+      if (lugar.horario) html += `<p><strong>${t.horario}:</strong> ${trDato(lugar.horario)}</p>`;
+      if (lugar.objetivo) html += `<p><strong>${t.objetivo}:</strong> ${trDato(lugar.objetivo)}</p>`;
+      if (lugar.descripcion) html += `<p><strong>${t.descripcion}:</strong> ${trDato(lugar.descripcion)}</p>`;
       if (lugar.micros) html += `<p><strong>${t.micros}:</strong> ${lugar.micros}</p>`;
       if (lugar.grupo === 'turistica' && lugar.micros) {
         const disp = lineasDisponiblesDeTexto(lugar.micros);
@@ -2199,8 +2328,9 @@
       capaLinea.clearLayers();
       if (limpiarViaje) capaViaje.clearLayers();
 
+      const t = traducciones[idiomaActual];
       const paradas = paradasDe(linea);
-      const sufijo = (sentidoActivo === 'vuelta' && linea.paradasVuelta) ? ' (vuelta)' : '';
+      const sufijo = (sentidoActivo === 'vuelta' && linea.paradasVuelta) ? ` (${t.sentidoVuelta.toLowerCase()})` : '';
       const puntos = paradas.map((p) => p.c);
       if (puntos.length) {
         map3.fitBounds(L.latLngBounds(puntos), { padding: [40, 40] });
@@ -2220,7 +2350,7 @@
             fillOpacity: 1
           })
             .bindPopup(
-              `<div class="popup-content"><h3>Línea ${num}${sufijo}</h3><p><strong>Parada ${i + 1}:</strong> ${p.n}</p><button type="button" class="popup-fav" data-fav="${datosFav(p)}">★ <span></span></button></div>`
+              `<div class="popup-content"><h3>${t.lineaLabel} ${num}${sufijo}</h3><p><strong>${t.paradaLabel} ${i + 1}:</strong> ${p.n}</p><button type="button" class="popup-fav" data-fav="${datosFav(p)}">★ <span></span></button></div>`
             )
             .addTo(capaLinea);
         };
@@ -2230,11 +2360,11 @@
     }
 
     // ===== Paraderos favoritos =====
-    Object.assign(traducciones.es, { favBtn: 'Mis paraderos', favTitulo: 'Mis paraderos favoritos', favVacio: 'Aún no guardas paraderos. Abre una línea, toca un paradero del mapa y pulsa la estrella ★.', favGuardar: 'Guardar paradero', favQuitar: 'Quitar de favoritos' });
-    Object.assign(traducciones.en, { favBtn: 'My stops', favTitulo: 'My favorite stops', favVacio: 'You haven’t saved any stops yet. Open a line, tap a stop on the map and press the star ★.', favGuardar: 'Save stop', favQuitar: 'Remove from favorites' });
-    Object.assign(traducciones.de, { favBtn: 'Meine Haltestellen', favTitulo: 'Meine Lieblingshaltestellen', favVacio: 'Du hast noch keine Haltestellen gespeichert. Öffne eine Linie, tippe auf eine Haltestelle und drücke den Stern ★.', favGuardar: 'Haltestelle speichern', favQuitar: 'Aus Favoriten entfernen' });
-    Object.assign(traducciones.pt, { favBtn: 'Meus pontos', favTitulo: 'Meus pontos favoritos', favVacio: 'Você ainda não salvou pontos. Abra uma linha, toque em um ponto no mapa e pressione a estrela ★.', favGuardar: 'Salvar ponto', favQuitar: 'Remover dos favoritos' });
-    Object.assign(traducciones.ht, { favBtn: 'Estasyon mwen yo', favTitulo: 'Estasyon mwen pi renmen yo', favVacio: 'Ou poko sove okenn estasyon. Louvri yon liy, tape yon estasyon sou kat la epi peze zetwal la ★.', favGuardar: 'Sove estasyon', favQuitar: 'Retire nan favori' });
+    Object.assign(traducciones.es, { favBtn: 'Mis paraderos', favTitulo: 'Mis paraderos favoritos', favVacio: 'Aún no guardas paraderos. Abre una línea, toca un paradero del mapa y pulsa la estrella ★.', favGuardar: 'Guardar paradero', favQuitar: 'Quitar de favoritos', lineaLabel: 'Línea', paradaLabel: 'Parada' });
+    Object.assign(traducciones.en, { favBtn: 'My stops', favTitulo: 'My favorite stops', favVacio: 'You haven’t saved any stops yet. Open a line, tap a stop on the map and press the star ★.', favGuardar: 'Save stop', favQuitar: 'Remove from favorites', lineaLabel: 'Line', paradaLabel: 'Stop' });
+    Object.assign(traducciones.de, { favBtn: 'Meine Haltestellen', favTitulo: 'Meine Lieblingshaltestellen', favVacio: 'Du hast noch keine Haltestellen gespeichert. Öffne eine Linie, tippe auf eine Haltestelle und drücke den Stern ★.', favGuardar: 'Haltestelle speichern', favQuitar: 'Aus Favoriten entfernen', lineaLabel: 'Linie', paradaLabel: 'Haltestelle' });
+    Object.assign(traducciones.pt, { favBtn: 'Meus pontos', favTitulo: 'Meus pontos favoritos', favVacio: 'Você ainda não salvou pontos. Abra uma linha, toque em um ponto no mapa e pressione a estrela ★.', favGuardar: 'Salvar ponto', favQuitar: 'Remover dos favoritos', lineaLabel: 'Linha', paradaLabel: 'Parada' });
+    Object.assign(traducciones.ht, { favBtn: 'Estasyon mwen yo', favTitulo: 'Estasyon mwen pi renmen yo', favVacio: 'Ou poko sove okenn estasyon. Louvri yon liy, tape yon estasyon sou kat la epi peze zetwal la ★.', favGuardar: 'Sove estasyon', favQuitar: 'Retire nan favori', lineaLabel: 'Liy', paradaLabel: 'Estasyon' });
 
     const FAV_KEY = 'sc_favoritos';
     const capaFav = L.layerGroup().addTo(map3);
@@ -2309,7 +2439,7 @@
       };
     });
 
-    // Panel de favoritos: ir al paradero o quitarlo
+    // Panel de favoritos ir al paradero o quitarlo
     const microPanelFavEl = document.getElementById('microPanelLateral');
     if (microPanelFavEl) {
       microPanelFavEl.addEventListener('click', (e) => {
@@ -2412,7 +2542,7 @@
             if (!reg.lineas.includes(num)) reg.lineas.push(num);
           });
         });
-        // Prioriza las paradas cuyo nombre empieza con la búsqueda
+        // Prioriza las paradas enn nombre empieza con la búsqueda
         return [...encontrados.values()].sort((a, b) => {
           const ea = normaliza(a.nombre).startsWith(q) ? 0 : 1;
           const eb = normaliza(b.nombre).startsWith(q) ? 0 : 1;

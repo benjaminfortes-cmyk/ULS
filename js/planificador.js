@@ -273,7 +273,7 @@
     L.polyline(coordsTramo, { color: linea.color, weight: 5, opacity: 0.85 }).addTo(capaPlan);
     tramo.forEach((p) => {
       L.circleMarker(p.c, { radius: 4.5, color: '#fff', weight: 1.5, fillColor: linea.color, fillOpacity: 1 })
-        .bindPopup(`<div class="popup-content"><h3>Línea ${op.num}</h3><p>${p.n}</p></div>`)
+        .bindPopup(`<div class="popup-content"><h3>${t.lineaLabel} ${op.num}</h3><p>${p.n}</p></div>`)
         .addTo(capaPlan);
     });
 
@@ -312,7 +312,7 @@
       item.className = 'micro-resultado plan-opcion' + (idx === 0 ? ' activo' : '');
       item.innerHTML = `
         <button type="button" class="micro-chip" style="--lc:${linea.color}">${op.num}</button>
-        <span class="micro-resultado__texto"><strong>Línea ${op.num}</strong> · ~${minCaminata} ${t.planCaminando}<br>${resumen}</span>`;
+        <span class="micro-resultado__texto"><strong>${t.lineaLabel} ${op.num}</strong> · ~${minCaminata} ${t.planCaminando}<br>${resumen}</span>`;
       item.addEventListener('click', () => {
         panel.querySelectorAll('.plan-opcion').forEach((el) => el.classList.remove('activo'));
         item.classList.add('activo');
