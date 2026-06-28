@@ -518,6 +518,34 @@
     </div>
   </section>
 
+  <!-- ===== soporte ===== -->
+  <section class="sc-contacto" id="contacto">
+    <div class="sc-contacto__inner">
+      <span class="sc-eyebrow sc-eyebrow--sin-guion" data-i18n="contactoEyebrow">Soporte</span>
+      <h2 data-i18n="contactoTitulo">Comentarios y sugerencias</h2>
+      <div class="sc-underline"></div>
+      <p data-i18n="contactoIntro">¿Tienes una sugerencia para mejorar la plataforma o detectaste algo que podemos arreglar? Cuéntanos y lo tendremos en cuenta.</p>
+
+      <form id="contactoForm" class="sc-contacto__form" novalidate>
+        <div class="sc-contacto__row">
+          <input type="text" id="cfNombre" name="nombre" required autocomplete="name"
+                 placeholder="Tu nombre" data-i18n-ph="contactoNombre" />
+          <input type="email" id="cfCorreo" name="correo" required autocomplete="email"
+                 placeholder="Tu correo" data-i18n-ph="contactoCorreo" />
+        </div>
+        <textarea id="cfMensaje" name="mensaje" rows="4" required
+                  placeholder="Tu comentario, sugerencia o reporte de un problema…" data-i18n-ph="contactoMensaje"></textarea>
+        <!--  antii spam  -->
+        <input type="text" id="cfHoney" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button type="submit" class="sc-btn sc-btn--primary" id="cfEnviar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <span data-i18n="contactoEnviar">Enviar mensaje</span>
+        </button>
+        <p class="sc-contacto__msg" id="cfMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
   <div class="sc-waves" aria-hidden="true">
     <svg viewBox="0 0 1440 130" preserveAspectRatio="none">
       <path d="M0 40 Q360 0 720 30 T1440 25 V130 H0Z" fill="#bfe0e4"/>

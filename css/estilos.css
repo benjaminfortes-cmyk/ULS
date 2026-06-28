@@ -1772,4 +1772,102 @@ html{ scroll-behavior:smooth; }
   background: #FEE2E2;
 }
 
+/* =====  Soporte ===== */
+.sc-contacto {
+  background: var(--sc-cream, #FBF6EA);
+  padding: 72px 24px 40px;
+}
+.sc-contacto__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.sc-contacto h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  color: var(--sc-navy, #143049);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin: 6px 0 0;
+}
+.sc-contacto > .sc-contacto__inner > p {
+  color: var(--sc-ink, #42525e);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  max-width: 56ch;
+  margin: 14px auto 0;
+}
+.sc-contacto__form {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+.sc-contacto__row {
+  display: flex;
+  gap: 14px;
+}
+.sc-contacto__row > input {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.sc-contacto__form input,
+.sc-contacto__form textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--sc-navy, #143049);
+  background: #fff;
+  border: 1.5px solid var(--linea, #dbe6f5);
+  border-radius: 14px;
+  padding: 13px 16px;
+  transition: border-color .18s, box-shadow .18s;
+}
+.sc-contacto__form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+.sc-contacto__form input::placeholder,
+.sc-contacto__form textarea::placeholder {
+  color: #9aa7b8;
+}
+.sc-contacto__form input:focus,
+.sc-contacto__form textarea:focus {
+  outline: none;
+  border-color: var(--sc-teal, #2C7C8B);
+  box-shadow: 0 0 0 3px rgba(44, 124, 139, .15);
+}
+.sc-contacto__form #cfHoney {
+  display: none;
+}
+.sc-contacto__form .sc-btn--primary {
+  align-self: center;
+  margin-top: 4px;
+  border: none;
+  cursor: pointer;
+}
+.sc-contacto__form .sc-btn--primary:disabled {
+  opacity: .65;
+  cursor: default;
+}
+.sc-contacto__msg {
+  margin: 4px 0 0;
+  text-align: center;
+  font-size: .95rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.sc-contacto__msg.visible {
+  opacity: 1;
+}
+.sc-contacto__msg--ok {
+  color: #16803c;
+}
+.sc-contacto__msg--error {
+  color: var(--sc-red, #D2492F);
+}
+@media (max-width: 560px) {
+  .sc-contacto__row {
+    flex-direction: column;
+  }
+}
 

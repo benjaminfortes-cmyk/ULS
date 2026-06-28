@@ -440,6 +440,73 @@
       footerFollow: 'Swiv nou sou Instagram'
     });
 
+    // ===== Diccion formulario de contacto  =====
+    Object.assign(traducciones.es, {
+      contactoEyebrow: 'Soporte',
+      contactoTitulo: 'Comentarios y sugerencias',
+      contactoIntro: '¿Tienes una sugerencia para mejorar la plataforma o detectaste algo que podemos arreglar? Cuéntanos y lo tendremos en cuenta.',
+      contactoNombre: 'Tu nombre',
+      contactoCorreo: 'Tu correo',
+      contactoMensaje: 'Tu comentario, sugerencia o reporte de un problema…',
+      contactoEnviar: 'Enviar mensaje',
+      contactoEnviando: 'Enviando…',
+      contactoOk: '¡Gracias! Tu mensaje fue enviado correctamente.',
+      contactoError: 'No se pudo enviar el mensaje. Inténtalo de nuevo más tarde.',
+      contactoCampos: 'Completa todos los campos con un correo válido.'
+    });
+    Object.assign(traducciones.en, {
+      contactoEyebrow: 'Support',
+      contactoTitulo: 'Comments and suggestions',
+      contactoIntro: 'Do you have a suggestion to improve the platform or spotted something we can fix? Tell us and we’ll take it into account.',
+      contactoNombre: 'Your name',
+      contactoCorreo: 'Your email',
+      contactoMensaje: 'Your comment, suggestion or problem report…',
+      contactoEnviar: 'Send message',
+      contactoEnviando: 'Sending…',
+      contactoOk: 'Thank you! Your message was sent successfully.',
+      contactoError: 'The message could not be sent. Please try again later.',
+      contactoCampos: 'Please fill in all fields with a valid email.'
+    });
+    Object.assign(traducciones.de, {
+      contactoEyebrow: 'Support',
+      contactoTitulo: 'Kommentare und Vorschläge',
+      contactoIntro: 'Haben Sie einen Vorschlag zur Verbesserung der Plattform oder etwas entdeckt, das wir beheben können? Sagen Sie es uns und wir berücksichtigen es.',
+      contactoNombre: 'Ihr Name',
+      contactoCorreo: 'Ihre E-Mail',
+      contactoMensaje: 'Ihr Kommentar, Vorschlag oder Ihre Problemmeldung…',
+      contactoEnviar: 'Nachricht senden',
+      contactoEnviando: 'Wird gesendet…',
+      contactoOk: 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.',
+      contactoError: 'Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.',
+      contactoCampos: 'Bitte füllen Sie alle Felder mit einer gültigen E-Mail aus.'
+    });
+    Object.assign(traducciones.pt, {
+      contactoEyebrow: 'Suporte',
+      contactoTitulo: 'Comentários e sugestões',
+      contactoIntro: 'Tem uma sugestão para melhorar a plataforma ou encontrou algo que podemos corrigir? Conte para nós e levaremos em consideração.',
+      contactoNombre: 'Seu nome',
+      contactoCorreo: 'Seu e-mail',
+      contactoMensaje: 'Seu comentário, sugestão ou relato de um problema…',
+      contactoEnviar: 'Enviar mensagem',
+      contactoEnviando: 'Enviando…',
+      contactoOk: 'Obrigado! Sua mensagem foi enviada com sucesso.',
+      contactoError: 'Não foi possível enviar a mensagem. Tente novamente mais tarde.',
+      contactoCampos: 'Preencha todos os campos com um e-mail válido.'
+    });
+    Object.assign(traducciones.ht, {
+      contactoEyebrow: 'Sipò',
+      contactoTitulo: 'Kòmantè ak sijesyon',
+      contactoIntro: 'Èske ou gen yon sijesyon pou amelyore platfòm nan oswa ou jwenn yon bagay nou ka ranje? Di nou epi n ap pran l an kont.',
+      contactoNombre: 'Non ou',
+      contactoCorreo: 'Imèl ou',
+      contactoMensaje: 'Kòmantè, sijesyon oswa rapò yon pwoblèm ou…',
+      contactoEnviar: 'Voye mesaj',
+      contactoEnviando: 'Ap voye…',
+      contactoOk: 'Mèsi! Mesaj ou a voye avèk siksè.',
+      contactoError: 'Nou pa t kapab voye mesaj la. Tanpri eseye ankò pita.',
+      contactoCampos: 'Tanpri ranpli tout chan yo ak yon imèl ki valab.'
+    });
+
     let idiomaActual = 'es';
     // Último lugar mostrado en cada panel 
     let seleccionInfo = null;
@@ -2769,3 +2836,58 @@
       const panel = document.getElementById('microPanelLateral');
       if (panel) renderCercanas(panel, cercanas, t.tapTitulo, t.nearbyVacio);
     });
+
+    // ===== Formulario de contacto =====
+    const contactoForm = document.getElementById('contactoForm');
+    if (contactoForm) {
+      const FORM_ENDPOINT = 'https://formsubmit.co/ajax/benjamin.fortes@userena.cl';
+      contactoForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const t = traducciones[idiomaActual];
+        const btn = document.getElementById('cfEnviar');
+        const btnSpan = btn.querySelector('span');
+        const msg = document.getElementById('cfMsg');
+        const nombre = document.getElementById('cfNombre').value.trim();
+        const correo = document.getElementById('cfCorreo').value.trim();
+        const mensaje = document.getElementById('cfMensaje').value.trim();
+        const honey = document.getElementById('cfHoney').value;
+
+        msg.className = 'sc-contacto__msg';
+        const correoOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
+        if (!nombre || !mensaje || !correoOk) {
+          msg.textContent = t.contactoCampos;
+          msg.classList.add('sc-contacto__msg--error', 'visible');
+          return;
+        }
+        if (honey) return; 
+
+        const original = btnSpan.textContent;
+        btn.disabled = true;
+        btnSpan.textContent = t.contactoEnviando;
+        msg.textContent = '';
+
+        try {
+          const resp = await fetch(FORM_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({
+              nombre,
+              correo,
+              mensaje,
+              _subject: 'Nuevo mensaje desde Serena Conecta'
+            })
+          });
+          if (!resp.ok) throw new Error('FormSubmit respondió ' + resp.status);
+          msg.textContent = t.contactoOk;
+          msg.classList.add('sc-contacto__msg--ok', 'visible');
+          contactoForm.reset();
+        } catch (err) {
+          console.warn('Error al enviar el formulario de contacto:', err);
+          msg.textContent = t.contactoError;
+          msg.classList.add('sc-contacto__msg--error', 'visible');
+        } finally {
+          btn.disabled = false;
+          btnSpan.textContent = original;
+        }
+      });
+    }
