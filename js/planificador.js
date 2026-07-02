@@ -375,14 +375,13 @@
   }
 
   function renderDestinos(consulta) {
-    const q = normaliza(consulta.trim());
-    if (q.length < 2) {
-      cerrarLista();
-      return;
-    }
-    const coincidencias = lugares
-      .filter((l) => normaliza(l.nombre + ' ' + (l.direccion || '')).includes(q))
-      .slice(0, 7);
+    // Busca por palabras sueltas: «el faro» encuentra «Faro Monumental de La Serena».
+    // Con el campo vacío muestra todos los lugares (la lista tiene scroll propio).
+    const palabras = normaliza(consulta.trim()).split(/\s+/).filter(Boolean);
+    const coincidencias = lugares.filter((l) => {
+      const texto = normaliza(l.nombre + ' ' + (l.direccion || ''));
+      return palabras.every((p) => texto.includes(p));
+    });
     listaDestino.innerHTML = '';
     const t = tPlan();
     if (!coincidencias.length) {
