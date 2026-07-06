@@ -1772,6 +1772,104 @@ html{ scroll-behavior:smooth; }
   background: #FEE2E2;
 }
 
+/* Cuerpo del favorito: nombre arriba, chips de líneas abajo */
+.fav-item__cuerpo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.fav-chips {
+  padding-left: 4px;
+}
+.fav-chips .micro-chip {
+  min-width: 26px;
+  height: 22px;
+  font-size: 11.5px;
+}
+
+/* Contador sobre el botón "Mis paraderos" */
+.micro-accion--fav {
+  position: relative;
+}
+.fav-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 21px;
+  height: 21px;
+  padding: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #fff;
+  background: #F59E0B;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.fav-badge.oculto {
+  display: none;
+}
+
+/* Botón compartir línea */
+.micro-accion--compartir {
+  color: #0E7490;
+  border-color: #0891B2;
+}
+.micro-accion--compartir svg {
+  color: #0891B2;
+}
+.micro-accion--compartir:hover {
+  background: #E0F2FE;
+  border-color: #0891B2;
+}
+
+/* Aviso flotante (guardado / quitado / enlace copiado) */
+.sc-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 26px;
+  transform: translate(-50%, 14px);
+  max-width: min(92vw, 480px);
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: var(--sc-navy, #143049);
+  border-radius: 999px;
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 4000;
+}
+.sc-toast.visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Acciones dentro de los popups del mapa (estrella + cómo llegar) */
+.popup-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.popup-acciones .popup-fav {
+  margin-top: 0;
+}
+.btn-comollegar--popup {
+  padding: 6px 12px;
+  font-size: 12.5px;
+  gap: 6px;
+  box-shadow: none;
+}
+
 /* =====  Soporte ===== */
 .sc-contacto {
   background: var(--sc-cream, #FBF6EA);

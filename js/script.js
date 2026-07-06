@@ -1,27 +1,36 @@
     //mi primer mapita
     const map = L.map('map').setView([-29.9032, -71.2496], 15);
 
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '© OpenStreetMap'
-    }).addTo(map);
-
     //Segundo mapa
     const map2 = L.map('map2').setView([-29.9032, -71.2496], 15);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '© OpenStreetMap'
-    }).addTo(map2);
 
     //Tercer mapa recorridos de micro
     const map3 = L.map('map3').setView([-29.905, -71.24], 13);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '© OpenStreetMap'
-    }).addTo(map3);
+    // Las teselas de OpenStreetMap se descargan recién cuando el mapa se acerca
+    // a la pantalla: la página carga más rápido en celulares
+    function cargarTilesAlVer(mapa, idContenedor) {
+      const capa = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+      });
+      const cont = document.getElementById(idContenedor);
+      if (!cont || !('IntersectionObserver' in window)) {
+        capa.addTo(mapa);
+        return;
+      }
+      const obs = new IntersectionObserver((entradas) => {
+        if (entradas.some((en) => en.isIntersecting)) {
+          capa.addTo(mapa);
+          mapa.invalidateSize();
+          obs.disconnect();
+        }
+      }, { rootMargin: '400px 0px' });
+      obs.observe(cont);
+    }
+    cargarTilesAlVer(map, 'map');
+    cargarTilesAlVer(map2, 'map2');
+    cargarTilesAlVer(map3, 'map3');
 
     const info = document.getElementById('info');
     const info2 = document.getElementById('info2');
@@ -2369,7 +2378,8 @@
     };
 
     const capaLinea = L.layerGroup().addTo(map3);
-    const capaViaje = L.layerGroup().addTo(map3); 
+    const capaViaje = L.layerGroup().addTo(map3);
+    const capaFav = L.layerGroup().addTo(map3); // marcador naranjo de "ir a un favorito"
     let lineaActiva = '1';
     let animToken = 0;
     let sentidoActivo = 'ida';
@@ -2393,6 +2403,7 @@
       if (!linea.paradasVuelta) sentidoActivo = 'ida';
       actualizarToggleSentido(linea);
       capaLinea.clearLayers();
+      capaFav.clearLayers();
       if (limpiarViaje) capaViaje.clearLayers();
 
       const t = traducciones[idiomaActual];
@@ -2417,7 +2428,7 @@
             fillOpacity: 1
           })
             .bindPopup(
-              `<div class="popup-content"><h3>${t.lineaLabel} ${num}${sufijo}</h3><p><strong>${t.paradaLabel} ${i + 1}:</strong> ${p.n}</p><button type="button" class="popup-fav" data-fav="${datosFav(p)}">★ <span></span></button></div>`
+              `<div class="popup-content"><h3>${t.lineaLabel} ${num}${sufijo}</h3><p><strong>${t.paradaLabel} ${i + 1}:</strong> ${p.n}</p><div class="popup-acciones"><button type="button" class="popup-fav" data-fav="${datosFav(p, num)}">★ <span></span></button><button type="button" class="btn-comollegar btn-comollegar--popup" data-lat="${p.c[0]}" data-lng="${p.c[1]}">➜ ${t.comoLlegar}</button></div></div>`
             )
             .addTo(capaLinea);
         };
@@ -2427,14 +2438,13 @@
     }
 
     // ===== Paraderos favoritos =====
-    Object.assign(traducciones.es, { favBtn: 'Mis paraderos', favTitulo: 'Mis paraderos favoritos', favVacio: 'Aún no guardas paraderos. Abre una línea, toca un paradero del mapa y pulsa la estrella ★.', favGuardar: 'Guardar paradero', favQuitar: 'Quitar de favoritos', lineaLabel: 'Línea', paradaLabel: 'Parada' });
-    Object.assign(traducciones.en, { favBtn: 'My stops', favTitulo: 'My favorite stops', favVacio: 'You haven’t saved any stops yet. Open a line, tap a stop on the map and press the star ★.', favGuardar: 'Save stop', favQuitar: 'Remove from favorites', lineaLabel: 'Line', paradaLabel: 'Stop' });
-    Object.assign(traducciones.de, { favBtn: 'Meine Haltestellen', favTitulo: 'Meine Lieblingshaltestellen', favVacio: 'Du hast noch keine Haltestellen gespeichert. Öffne eine Linie, tippe auf eine Haltestelle und drücke den Stern ★.', favGuardar: 'Haltestelle speichern', favQuitar: 'Aus Favoriten entfernen', lineaLabel: 'Linie', paradaLabel: 'Haltestelle' });
-    Object.assign(traducciones.pt, { favBtn: 'Meus pontos', favTitulo: 'Meus pontos favoritos', favVacio: 'Você ainda não salvou pontos. Abra uma linha, toque em um ponto no mapa e pressione a estrela ★.', favGuardar: 'Salvar ponto', favQuitar: 'Remover dos favoritos', lineaLabel: 'Linha', paradaLabel: 'Parada' });
-    Object.assign(traducciones.ht, { favBtn: 'Estasyon mwen yo', favTitulo: 'Estasyon mwen pi renmen yo', favVacio: 'Ou poko sove okenn estasyon. Louvri yon liy, tape yon estasyon sou kat la epi peze zetwal la ★.', favGuardar: 'Sove estasyon', favQuitar: 'Retire nan favori', lineaLabel: 'Liy', paradaLabel: 'Estasyon' });
+    Object.assign(traducciones.es, { favBtn: 'Mis paraderos', favTitulo: 'Mis paraderos favoritos', favVacio: 'Aún no guardas paraderos. Abre una línea, toca un paradero del mapa y pulsa la estrella ★.', favGuardar: 'Guardar paradero', favQuitar: 'Quitar de favoritos', lineaLabel: 'Línea', paradaLabel: 'Parada', favToastOn: '★ Paradero guardado en «Mis paraderos»', favToastOff: 'Paradero quitado de favoritos', compartirLinea: 'Compartir línea', compartirCopiado: '¡Enlace copiado! Pégalo en WhatsApp o donde quieras.' });
+    Object.assign(traducciones.en, { favBtn: 'My stops', favTitulo: 'My favorite stops', favVacio: 'You haven’t saved any stops yet. Open a line, tap a stop on the map and press the star ★.', favGuardar: 'Save stop', favQuitar: 'Remove from favorites', lineaLabel: 'Line', paradaLabel: 'Stop', favToastOn: '★ Stop saved to “My stops”', favToastOff: 'Stop removed from favorites', compartirLinea: 'Share line', compartirCopiado: 'Link copied! Paste it anywhere.' });
+    Object.assign(traducciones.de, { favBtn: 'Meine Haltestellen', favTitulo: 'Meine Lieblingshaltestellen', favVacio: 'Du hast noch keine Haltestellen gespeichert. Öffne eine Linie, tippe auf eine Haltestelle und drücke den Stern ★.', favGuardar: 'Haltestelle speichern', favQuitar: 'Aus Favoriten entfernen', lineaLabel: 'Linie', paradaLabel: 'Haltestelle', favToastOn: '★ Haltestelle gespeichert', favToastOff: 'Haltestelle entfernt', compartirLinea: 'Linie teilen', compartirCopiado: 'Link kopiert! Füge ihn ein, wo du willst.' });
+    Object.assign(traducciones.pt, { favBtn: 'Meus pontos', favTitulo: 'Meus pontos favoritos', favVacio: 'Você ainda não salvou pontos. Abra uma linha, toque em um ponto no mapa e pressione a estrela ★.', favGuardar: 'Salvar ponto', favQuitar: 'Remover dos favoritos', lineaLabel: 'Linha', paradaLabel: 'Parada', favToastOn: '★ Ponto salvo em «Meus pontos»', favToastOff: 'Ponto removido dos favoritos', compartirLinea: 'Compartilhar linha', compartirCopiado: 'Link copiado! Cole onde quiser.' });
+    Object.assign(traducciones.ht, { favBtn: 'Estasyon mwen yo', favTitulo: 'Estasyon mwen pi renmen yo', favVacio: 'Ou poko sove okenn estasyon. Louvri yon liy, tape yon estasyon sou kat la epi peze zetwal la ★.', favGuardar: 'Sove estasyon', favQuitar: 'Retire nan favori', lineaLabel: 'Liy', paradaLabel: 'Estasyon', favToastOn: '★ Estasyon sove', favToastOff: 'Estasyon retire nan favori', compartirLinea: 'Pataje liy la', compartirCopiado: 'Lyen kopye! Kole li kote ou vle.' });
 
     const FAV_KEY = 'sc_favoritos';
-    const capaFav = L.layerGroup().addTo(map3);
 
     function cargarFav() {
       try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
@@ -2447,10 +2457,51 @@
     function toggleFav(p) {
       const arr = cargarFav();
       const i = arr.findIndex((f) => favId(f) === favId(p));
-      if (i >= 0) arr.splice(i, 1); else arr.push({ n: p.n, c: p.c });
+      const agregado = i < 0;
+      if (agregado) arr.push({ n: p.n, c: p.c, l: p.l }); else arr.splice(i, 1);
       guardarFav(arr);
+      actualizarFavBadge();
+      const t = traducciones[idiomaActual];
+      mostrarToast(agregado ? t.favToastOn : t.favToastOff);
+      return agregado;
     }
-    function datosFav(p) { return encodeURIComponent(JSON.stringify({ n: p.n, c: p.c })); }
+    function datosFav(p, linea) { return encodeURIComponent(JSON.stringify({ n: p.n, c: p.c, l: linea || p.l })); }
+
+    // Aviso flotante breve (guardado / quitado / enlace copiado)
+    let toastTimer = null;
+    function mostrarToast(texto) {
+      let el = document.getElementById('scToast');
+      if (!el) {
+        el = document.createElement('div');
+        el.id = 'scToast';
+        el.className = 'sc-toast';
+        el.setAttribute('role', 'status');
+        el.setAttribute('aria-live', 'polite');
+        document.body.appendChild(el);
+      }
+      el.textContent = texto;
+      el.classList.add('visible');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('visible'), 2400);
+    }
+
+    // Contador sobre el botón "Mis paraderos"
+    function actualizarFavBadge() {
+      const b = document.getElementById('microFavBadge');
+      if (!b) return;
+      const n = cargarFav().length;
+      b.textContent = n;
+      b.classList.toggle('oculto', n === 0);
+    }
+
+    // Todas las líneas con una parada a menos de 40 m del favorito
+    function lineasQueSirven(f) {
+      return Object.keys(lineasMicro).filter((num) => {
+        const li = lineasMicro[num];
+        const todas = li.paradasVuelta ? li.paradas.concat(li.paradasVuelta) : li.paradas;
+        return todas.some((p) => distancia(p.c, f.c) < 40);
+      });
+    }
 
     function favPanelVisible() {
       const panel = document.getElementById('microPanelLateral');
@@ -2466,17 +2517,34 @@
         panel.innerHTML = `<div class="fav-panel"><h3 class="fav-panel__tit">★ ${t.favTitulo}</h3><p class="fav-vacio">${t.favVacio}</p></div>`;
         return;
       }
-      const items = favs.map((f, idx) =>
-        `<li class="fav-item"><button type="button" class="fav-ir" data-fav-idx="${idx}"><span class="fav-estrella">★</span><span>${f.n}</span></button><button type="button" class="fav-del" data-fav-del="${idx}" title="${t.favQuitar}" aria-label="${t.favQuitar}">×</button></li>`
-      ).join('');
+      const items = favs.map((f, idx) => {
+        const chips = lineasQueSirven(f)
+          .map((num) => `<button type="button" class="micro-chip" data-fav-linea="${num}" data-fav-i="${idx}" style="--lc:${lineasMicro[num].color}" title="${t.lineaLabel} ${num}">${num}</button>`)
+          .join('');
+        const fila = chips ? `<div class="micro-chips fav-chips"><span class="micro-chips__label">${t.microLineasLabel}:</span>${chips}</div>` : '';
+        return `<li class="fav-item"><div class="fav-item__cuerpo"><button type="button" class="fav-ir" data-fav-idx="${idx}"><span class="fav-estrella">★</span><span>${f.n}</span></button>${fila}</div><button type="button" class="fav-del" data-fav-del="${idx}" title="${t.favQuitar}" aria-label="${t.favQuitar}">×</button></li>`;
+      }).join('');
       panel.innerHTML = `<div class="fav-panel"><h3 class="fav-panel__tit">★ ${t.favTitulo}</h3><ul class="fav-lista">${items}</ul></div>`;
+    }
+
+    // Ir a un favorito: si sabemos su línea la dibujamos completa;
+    // si no (favoritos antiguos), buscamos una línea que lo sirva
+    function irAFavorito(f) {
+      if (f.l && lineasMicro[f.l]) {
+        seleccionarLineaYCentrar(f.l, f.c);
+        return;
+      }
+      const nums = lineasQueSirven(f);
+      if (nums.length) seleccionarLineaYCentrar(nums[0], f.c);
+      else mostrarFavEnMapa(f);
     }
 
     function mostrarFavEnMapa(f) {
       capaFav.clearLayers();
       map3.setView(f.c, 16, { animate: true });
+      const t = traducciones[idiomaActual];
       L.circleMarker(f.c, { radius: 9, color: '#ffffff', weight: 3, fillColor: '#f59e0b', fillOpacity: 1 })
-        .bindPopup(`<div class="popup-content"><h3>★ ${f.n}</h3><button type="button" class="popup-fav" data-fav="${datosFav(f)}">★ <span></span></button></div>`)
+        .bindPopup(`<div class="popup-content"><h3>★ ${f.n}</h3><div class="popup-acciones"><button type="button" class="popup-fav" data-fav="${datosFav(f)}">★ <span></span></button><button type="button" class="btn-comollegar btn-comollegar--popup" data-lat="${f.c[0]}" data-lng="${f.c[1]}">➜ ${t.comoLlegar}</button></div></div>`)
         .addTo(capaFav)
         .openPopup();
       document.getElementById('map3')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -2500,13 +2568,15 @@
       };
       sync();
       btn.onclick = () => {
-        toggleFav(p);
+        const agregado = toggleFav(p);
         sync();
+        // si se quitó y era el marcador naranjo, lo limpiamos del mapa
+        if (!agregado) capaFav.clearLayers();
         if (favPanelVisible()) renderFavoritos();
       };
     });
 
-    // Panel de favoritos ir al paradero o quitarlo
+    // Panel de favoritos ir al paradero, ver una línea o quitarlo
     const microPanelFavEl = document.getElementById('microPanelLateral');
     if (microPanelFavEl) {
       microPanelFavEl.addEventListener('click', (e) => {
@@ -2515,18 +2585,28 @@
           const arr = cargarFav();
           arr.splice(+del.getAttribute('data-fav-del'), 1);
           guardarFav(arr);
+          capaFav.clearLayers(); // que no quede el marcador naranjo huérfano
+          map3.closePopup();     // ni popups con el estado viejo
+          actualizarFavBadge();
           renderFavoritos();
+          return;
+        }
+        const chip = e.target.closest('[data-fav-linea]');
+        if (chip) {
+          const f = cargarFav()[+chip.getAttribute('data-fav-i')];
+          if (f) seleccionarLineaYCentrar(chip.getAttribute('data-fav-linea'), f.c);
           return;
         }
         const ir = e.target.closest('[data-fav-idx]');
         if (ir) {
           const f = cargarFav()[+ir.getAttribute('data-fav-idx')];
-          if (f) mostrarFavEnMapa(f);
+          if (f) irAFavorito(f);
         }
       });
     }
 
     document.getElementById('microFavBtn')?.addEventListener('click', renderFavoritos);
+    actualizarFavBadge();
 
     const lineaBtns = document.querySelectorAll('[data-linea]');
     lineaBtns.forEach((btn) => {
@@ -2534,9 +2614,36 @@
         lineaBtns.forEach((b) => b.classList.remove('activo'));
         btn.classList.add('activo');
         sentidoActivo = 'ida';
-        mostrarLinea(btn.getAttribute('data-linea'));
+        const num = btn.getAttribute('data-linea');
+        mostrarLinea(num);
+        actualizarHashLinea(num);
       });
     });
+
+    // ===== Línea compartible por URL (#micros?linea=8) =====
+    function hashDeLinea(num) { return '#micros?linea=' + encodeURIComponent(num); }
+    function actualizarHashLinea(num) {
+      if (history.replaceState) history.replaceState(null, '', hashDeLinea(num));
+    }
+
+    const compartirLineaBtn = document.getElementById('compartirLineaBtn');
+    if (compartirLineaBtn) {
+      compartirLineaBtn.addEventListener('click', async () => {
+        const t = traducciones[idiomaActual];
+        const url = location.origin + location.pathname + hashDeLinea(lineaActiva);
+        const titulo = `${t.lineaLabel} ${lineaActiva} · Serena Conecta`;
+        if (navigator.share) {
+          try { await navigator.share({ title: titulo, url }); return; }
+          catch (e) { if (e && e.name === 'AbortError') return; }
+        }
+        try {
+          await navigator.clipboard.writeText(url);
+          mostrarToast(t.compartirCopiado);
+        } catch (e) {
+          mostrarToast(url);
+        }
+      });
+    }
 
     function sincronizarBotonesLinea(num) {
       lineaBtns.forEach((b) => b.classList.toggle('activo', b.getAttribute('data-linea') === num));
@@ -2557,8 +2664,25 @@
       });
     });
 
+    // Si llegan con un enlace compartido (#micros?linea=8) abrimos esa línea
+    (function lineaDesdeURL() {
+      const m = (location.hash || '').match(/linea=([^&]+)/i);
+      if (!m) return;
+      const num = decodeURIComponent(m[1]).toUpperCase();
+      if (!lineasMicro[num]) return;
+      lineaActiva = num;
+      sincronizarBotonesLinea(num);
+      // scroll instantáneo tras el load: el suave se cancela mientras cargan las imágenes
+      const irASeccion = () => setTimeout(() => {
+        const sec = document.getElementById('micros');
+        if (sec) window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY - 80, behavior: 'instant' });
+      }, 250);
+      if (document.readyState === 'complete') irASeccion();
+      else window.addEventListener('load', irASeccion);
+    })();
+
     mostrarLinea(lineaActiva, { animar: false });
-    
+
     setTimeout(() => {
       map3.invalidateSize();
       mostrarLinea(lineaActiva, { animar: true });
@@ -2569,6 +2693,7 @@
       sincronizarBotonesLinea(num);
       sentidoActivo = 'ida';
       mostrarLinea(num, { animar: false });
+      actualizarHashLinea(num);
       if (coords) {
         map3.setView(coords, 16, { animate: true });
         let abierto = false;
